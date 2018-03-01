@@ -5,5 +5,5 @@
 插入一张图片![图片名称随便取一个好了](http://p1.so.qhimgs1.com/bdr/_240_/t01e8b55a2279ee4a81.jpg)	
 
 ```
-<img src="project/public/img/base.jpg" alt=""/>
+project/public/img/base.jpg"
 ```
