@@ -8,4 +8,4 @@
 
 ```
 
-![本地图片](src=git@github.com:wangzefei/**agricultural-internet-of-things/project/public/img/base.jpg")
+![本地图片](src=git@github.com:wangzefei/agricultural-internet-of-things/project/public/img/base.jpg")
