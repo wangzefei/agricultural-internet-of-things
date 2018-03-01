@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/css/basic.css"/>
+    <link rel="stylesheet" href="../public/css/main.css"/>
+    <link rel="stylesheet" href="../public/layui/css/layui.css"/>
+    <script src="../public/js/jquery-1.11.1.min.js"></script>
+    <title>产品追溯</title>
+</head>
+<body>
+<form class="layui-form" action="">
+<div class="m-body">
+    <!--头部导航，多个页面共用-->
+    <div class="m-header">
+        <div class="mh">
+            <div class="mh1">
+                <div class="mh1-1 dl">智慧农业云平台</div>
+                <div class="mh1-2 dl">
+
+                </div>
+                <div class="mh1-3 dr">
+                    <a href="index.html"><div class="mh1-3s dr"><img src="../public/img/icon4.png" alt=""/> 退出登录</div></a>
+                    <div class="mh1-3s dr"><img src="../public/img/icon5.png" alt=""/>普通管理员：朱培林</div>
+                    <a href="map.html"><div class="mh1-3s dr"><img src="../public/img/icon3.png" alt=""/> 地图导航</div></a>
+                </div>
+            </div>
+            <div class="mh2">
+                <div class="mh2-1 dl">
+                    <div class="layui-input-inline" style="width: 150px">
+                        <select name="interest" lay-filter="aihao">
+                            <option value="">请选择区域</option>
+                            <option value="1" selected="">区域1</option>
+                            <option value="2">区域2</option>
+                            <option value="3">区域3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mh2-2 dl">
+                    <!--选中状态为nav-in-->
+                    <a href="main8-1.html"><div class="nav naved dr ">农事管理</div></a>
+                    <a href="main7-1.html"><div class="nav dr nav-in">产品追溯</div></a>
+                    <a href="main6.html"><div class="nav dr ">告警管理</div></a>
+                    <a href="main5.html"><div class="nav dr ">历史数据</div></a>
+                    <a href="main4.html"><div class="nav dr ">视频监控</div></a>
+                    <a href="main3.html"><div class="nav dr  ">设备控制</div></a>
+                    <a href="main2.html"><div class="nav dr ">实时数据</div></a>
+                    <a href="main1.html"><div class="nav dr ">基地实景</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m-main">
+        <div class="main">
+            <div class="ss1">
+                    <button  class="layui-btn ml20 fr">搜索</button>
+                    <div class="layui-input-inline fr ml20" >
+                        <div class="layui-input-block" style="width: 150px;margin-left: 0">
+                            <select name="interest" lay-filter="aihao">
+                                <option value="">所有</option>
+                                <option value="0">01标准型水稻（4）</option>
+                                <option value="1" selected="">红地球（5）</option>
+                                <option value="2">青椒（11）</option>
+                                <option value="3">辣椒（4）</option>
+                                <option value="4">玉米（3）</option>
+                            </select>
+                        </div>
+                    </div>
+            </div>
+            <div class="table" style="margin-top: 50px">
+                <div class="layui-form">
+                    <table id="table" class="layui-table">
+                        <thead>
+                        <tr>
+                            <th>产品品种</th>
+                            <th>批次名称</th>
+                            <th>产品状态</th>
+                            <th>上市时间</th>
+                            <th>总量/预计总量</th>
+                            <th>二维码</th>
+                            <th>详情</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>芝麻->白芝麻</td>
+                            <td>芝麻001</td>
+                            <td>出售</td>
+                            <td>2017-08-08</td>
+                            <td>10千克</td>
+                            <td></td>
+                            <td>
+                                <a href="main7-1s.html" target="_blank"><span class="dj">查看详情</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>芝麻->白芝麻</td>
+                            <td>芝麻001</td>
+                            <td>出售</td>
+                            <td>2017-08-08</td>
+                            <td>10千克</td>
+                            <td></td>
+                            <td>
+                                <a href="main7-1s.html" target="_blank"><span class="dj">查看详情</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>芝麻->白芝麻</td>
+                            <td>芝麻001</td>
+                            <td>出售</td>
+                            <td>2017-08-08</td>
+                            <td>10千克</td>
+                            <td></td>
+                            <td>
+                                <a href="main7-1s.html" target="_blank"><span class="dj">查看详情</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>芝麻->白芝麻</td>
+                            <td>芝麻001</td>
+                            <td>出售</td>
+                            <td>2017-08-08</td>
+                            <td>10千克</td>
+                            <td></td>
+                            <td>
+                                <a href="main7-1s.html" target="_blank"><span class="dj">查看详情</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>芝麻->白芝麻</td>
+                            <td>芝麻001</td>
+                            <td>出售</td>
+                            <td>2017-08-08</td>
+                            <td>10千克</td>
+                            <td></td>
+                            <td>
+                                <a href="main7-1s.html" target="_blank"><span class="dj">查看详情</span></a>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>芝麻->白芝麻</td>
+                            <td>芝麻001</td>
+                            <td>出售</td>
+                            <td>2017-08-08</td>
+                            <td>10千克</td>
+                            <td></td>
+                            <td>
+                                <a href="main7-1s.html" target="_blank"><span class="dj">查看详情</span></a>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>芝麻->白芝麻</td>
+                            <td>芝麻001</td>
+                            <td>出售</td>
+                            <td>2017-08-08</td>
+                            <td>10千克</td>
+                            <td></td>
+                            <td>
+                                <a href="main7-1s.html" target="_blank"><span class="dj">查看详情</span></a>
+
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="fy">这里是分页</div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</form>
+<script src="../public/layui/layui.js"></script>
+
+
+<script>
+    layui.use(['form'], function() {
+        var form = layui.form;
+    })
+    $(".sc").click(function () {
+        layer.confirm('确认删除？', {
+            btn: ['是','否'] //按钮
+        });
+
+
+    });
+
+
+</script>
+
+</body>
+</html>

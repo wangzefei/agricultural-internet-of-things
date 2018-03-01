@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/css/basic.css"/>
+    <link rel="stylesheet" href="../public/css/main.css"/>
+    <link rel="stylesheet" href="../public/css/sp.css" />
+    <link rel="stylesheet" href="../public/layui/css/layui.css"/>
+    <script src="../public/js/jquery-1.11.1.min.js"></script>
+    <title>设备控制</title>
+    <style></style>
+</head>
+<body>
+<form action="" class="layui-form">
+    <div class="m-body">
+        <!--头部导航，多个页面共用-->
+        <div class="m-header">
+            <div class="mh">
+                <div class="mh1">
+                    <div class="mh1-1 dl">LOGO智慧农业云平台</div>
+                    <div class="mh1-2 dl"></div>
+                    <div class="mh1-3 dr">
+                        <a href="index.html"><div class="mh1-3s dr"><img src="../public/img/icon4.png" alt=""/> 退出登录</div></a>
+                        <div class="mh1-3s dr"><img src="../public/img/icon5.png" alt=""/>普通管理员：朱培林</div>
+                        <a href="map.html"><div class="mh1-3s dr"><img src="../public/img/icon3.png" alt=""/> 地图导航</div></a>
+                    </div>
+                </div>
+                <div class="mh2">
+                    <div class="mh2-1 dl">
+                        <div class="layui-input-inline" style="width: 150px">
+                            <select name="interest" lay-filter="aihao">
+                                <option value="">请选择区域</option>
+                                <option value="1" selected="">区域1</option>
+                                <option value="2">区域2</option>
+                                <option value="3">区域3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mh2-2 dl">
+                        <!--选中状态为nav-in-->
+                        <a href="main8-1.html"><div class="nav naved dr ">农事管理</div></a>
+                        <a href="main7-1.html"><div class="nav dr ">产品追溯</div></a>
+                        <a href="main6.html"><div class="nav dr ">告警管理</div></a>
+                        <a href="main5.html"><div class="nav dr ">历史数据</div></a>
+                        <a href="main4.html"><div class="nav dr ">视频监控</div></a>
+                        <a href="main3.html"><div class="nav dr nav-in">设备控制</div></a>
+                        <a href="main2.html"><div class="nav dr ">实时数据</div></a>
+                        <a href="main1.html"><div class="nav dr ">基地实景</div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-main">
+            <div class="main">
+                <div class="ss1" style="padding-left: 0">
+                    <form class="layui-form" action="">
+                        <div class="layui-input-inline " >
+                            <div class="layui-input-block" style="width: 150px;margin-left:0">
+                                <select name="interest"  lay-filter="aihao" id="select">
+                                    <option value="">请选择区块</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <input type="button" class="layui-btn ml20 sch " value="搜索"/>
+                        <div id="poup"  class="layui-btn fr ">设备操作记录</div>
+                    </form>
+                </div>
+                <div class="sb1">
+                    <!--左侧参数-->
+                    <div class="sb1-1 dl">
+                        <div class="sb1a">
+                            <div class="sb1a1 dl"><img src="../public/img/k1.png" alt=""/></div>
+                            <div class="sb1a2 dl">
+                                <div class="mt20">空气温度</div>
+                                <div>29.4°C</div>
+                            </div>
+                        </div>
+                        <div class="sb1a">
+                            <div class="sb1a1 dl"><img src="../public/img/k2.png" alt=""/></div>
+                            <div class="sb1a2 dl">
+                                <div class="mt20">空气湿度</div>
+                                <div>89.2°%RH</div>
+                            </div>
+                        </div>
+                        <div class="sb1a">
+                            <div class="sb1a1 dl"><img src="../public/img/k3.png" alt=""/></div>
+                            <div class="sb1a2 dl">
+                                <div class="mt20">土壤温度</div>
+                                <div>29.4°C</div>
+                            </div>
+                        </div>
+                        <div class="sb1a">
+                            <div class="sb1a1 dl"><img src="../public/img/k4.png" alt=""/></div>
+                            <div class="sb1a2 dl">
+                                <div class="mt20">土壤湿度</div>
+                                <div>16.5%</div>
+                            </div>
+                        </div>
+                        <div class="sb1a">
+                            <div class="sb1a1 dl"><img src="../public/img/k5.png" alt=""/></div>
+                            <div class="sb1a2 dl">
+                                <div class="mt20">空气温度</div>
+                                <div>29.4°C</div>
+                            </div>
+                        </div>
+                        <div class="sb1a">
+                            <div class="sb1a1 dl"><img src="../public/img/k5.png" alt=""/></div>
+                            <div class="sb1a2 dl">
+                                <div class="mt20">空气温度</div>
+                                <div>29.4°C</div>
+                            </div>
+                        </div>
+                        <div class="sb1a">
+                            <div class="sb1a1 dl"><img src="../public/img/k5.png" alt=""/></div>
+                            <div class="sb1a2 dl">
+                                <div class="mt20">空气温度</div>
+                                <div>29.4°C</div>
+                            </div>
+                        </div>
+                        <div class="sb1a">
+                            <div class="sb1a1 dl"><img src="../public/img/k5.png" alt=""/></div>
+                            <div class="sb1a2 dl">
+                                <div class="mt20">空气温度</div>
+                                <div>29.4°C</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--中间视频-->
+                    <div class="sb1-2 dl">
+                        <div class="content" >
+                            <div class="video" id="video" style="position: absolute;z-index: -999">
+                                <embed style="position: absolute;z-index: -999" align="center" wmode="transparent" type="application/webvideo-plugin-kit" width="100%" height="100%" name="webVideoCtrl20171109090246" wndtype="1" playmode="2" colors="">
+                            </div>
+                        </div>
+                    </div>
+                    <!--右侧设备-->
+                    <div class="sb1-3 dl">
+                        <form class="layui-form" action="">
+                            <!--一个sb对应一个设备-->
+                            <div class="sb">
+                                <!--设备开关控制-->
+                                <div class="sbcz sz" >
+                                    <div class="sb3a"><span class="aaa">农丰盒子11</span>
+                                        <span class="layui-btn fr set">设置</span>
+                                    </div>
+
+                                    <div class="sb3a">
+                                        <span class="sb3a1">远程控制:</span>
+                                        <input class="fl d kz" type="checkbox"  lay-filter="switch4"  lay-skin="switch"  lay-text="ON|OFF">
+                                    </div>                                    
+									<div class="sb3a">
+										<span class="sb3a1">手动控制:</span>
+										<input class="fl a kz" type="checkbox" lay-filter="switch1"  lay-skin="switch"  lay-text="ON|OFF">
+									</div>
+                                    <div class="sb3a">
+                                        <span class="sb3a1">定时控制:</span>
+                                        <input class="fl b kz"  type="checkbox" lay-filter="switch2" checked=""  lay-skin="switch"  lay-text="ON|OFF">
+                                        <!--<span class="sb3a2">启动时间14:03，关闭时间17:30</span>-->
+                                    </div>
+                                    <div class="sb3a">
+                                        <span class="sb3a1">参数控制:</span>
+                                        <input class="fl c kz" type="checkbox" lay-filter="switch3"  lay-skin="switch" lay-text="ON|OFF">
+                                        <!--<span class="sb3a2">启动值：28℃，关闭值35℃</span>-->
+                                    </div>
+                                </div>
+                                <!--设备定时参数设置-->
+                                <div class="sbsz sbsz1" style="display: none">
+                                    <!--<button class="layui-btn">开启</button>-->
+                                    <br/>
+                                    通道名1:<input type="checkbox" lay-filter="switch" checked=""  lay-skin="switch"  lay-text="ON|OFF"><br>
+									通道名2:<input type="checkbox" lay-filter="switch" checked=""  lay-skin="switch"  lay-text="ON|OFF">
+									
+									
+                                    <div class="sb3a" >
+                                      <!--  <span class="layui-btn bc">保存</span>-->
+                                        <span class="layui-btn fh">返回控制页面</span>
+                                    </div>
+									
+                                </div>
+                                <div class="sbsz sbsz2" style="display: none">
+                                    <div class="sb3a">
+                                    <span class="sb3a2">
+									启动时间 
+                                     <div class="layui-input-inline">
+                                        <input type="text" class="layui-input layui-time"  style="width: 100px">
+                                     </div>
+									 <br>
+									 关闭时间
+                                     <div class="layui-input-inline">
+                                        <input type="text" class="layui-input layui-time" style="width: 100px">
+                                     </div>
+                                    </span>
+                                    </div>
+                                    <div class="sb3a" >
+                                        <span class="layui-btn bc">保存</span>
+                                        <span class="layui-btn fh">返回</span>
+                                    </div>
+                                </div>
+
+                                <div class="sbsz sbsz3" style="display: none">
+                                    <div class="sb3a">
+                                        <div class="sb3a2">
+										通道名1:
+                                            上限值
+                                            <div class="layui-input-inline">
+                                                <input type="text" name="username" class="layui-input"  style="width: 50px">
+                                            </div>
+                                            下限值
+                                            <div class="layui-input-inline">
+                                                <input type="text" name="username" class="layui-input"  style="width: 50px">
+                                            </div>
+                                        </div>
+										<div class="sb3a2">
+										通道名2:
+                                            上限值
+                                            <div class="layui-input-inline">
+                                                <input type="text" name="username" class="layui-input"  style="width: 50px">
+                                            </div>
+                                            下限值
+                                            <div class="layui-input-inline">
+                                                <input type="text" name="username" class="layui-input"  style="width: 50px">
+                                            </div>
+                                        </div>
+										<div class="sb3a2">
+										通道名3:
+                                            上限值
+                                            <div class="layui-input-inline">
+                                                <input type="text" name="username" class="layui-input"  style="width: 50px">
+                                            </div>
+                                            下限值
+                                            <div class="layui-input-inline">
+                                                <input type="text" name="username" class="layui-input"  style="width: 50px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sb3a" >
+                                        <span class="layui-btn bc">保存</span>
+                                        <span class="layui-btn fh">返回</span>
+                                    </div>
+                                </div>
+                            </div>
+						</form>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div style="height: 50px"></div>
+
+        </div>
+    </div>
+
+
+</form>
+
+
+
+
+
+<script type="text/javascript" src="../public/layui/layui.js" ></script>
+<script type="text/javascript" src="../public/js/jquery.rollbar.min.js" ></script>
+<!--海康插件核心JS文件-->
+<script type="text/javascript" src="../public/js/webVideoCtrl.js"></script>
+<!--操作文件-->
+<script  src="../public/js/video1.js"></script>
+<script>
+
+    layui.use(['form','layer'], function() {
+        var form = layui.form;
+        var layer = layui.layer;
+    })
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //时间选择器
+        $(".layui-time").each(function () {
+            laydate.render({
+                elem: this, //指定元素
+                type: 'time',
+            });
+        });
+    });
+
+    function getDataFromAjax(){
+        var camData=[];
+        camData.push({"place_name":"我是区块1","b_id":"1","name":"IPdome","ipaddress":"27.155.177.209:8889","port":"8889","online":"无所谓","id":"1"});
+        camData.push({"place_name":"我是区块2","b_id":"2","name":"IPCamera 02","ipaddress":"27.155.177.209:8889","port":"8889","online":"无所谓","id":"2"});
+        login1();
+        cameraList=camData;
+        loadCameras();
+    }
+    window.onload=function(){
+        getNowVideo();
+    }
+    layui.use(['form'],function() {
+        var form = layui.form;
+        var s = layui.jquery
+//        设备开关控制，只允许一个打开
+        form.on('switch(switch1)', function(data){
+            var that=this;
+//            判断是否选中
+            var flag = this.checked ? 'true' : 'false';
+            var sw1="";
+            var sw2="";
+            var sw3="";
+            var sw4="";
+            sw1=$(that).closest('.sbcz').find('.layui-form-switch').eq(0).hasClass('layui-form-onswitch');
+            sw2=$(that).closest('.sbcz').find('.layui-form-switch').eq(1).hasClass('layui-form-onswitch');
+            sw3=$(that).closest('.sbcz').find('.layui-form-switch').eq(2).hasClass('layui-form-onswitch');
+            sw4=$(that).closest('.sbcz').find('.layui-form-switch').eq(3).hasClass('layui-form-onswitch');
+
+            if (flag =="true"){
+//                选中状态
+                layer.confirm('确定更改控制方式？', {
+<<<<<<< .mine
+//                    offset:'10px',
+||||||| .r36
+                    offset:'10px',
+=======
+                    offset:'350px',
+>>>>>>> .r38
+                    btn: ['确认','取消'] //按钮
+                }, function(){
+                    $(that).parents(".sbcz").find(".a").attr('checked', true);
+                    $(that).parents(".sbcz").find(".b").attr('checked', false);
+                    $(that).parents(".sbcz").find(".c").attr('checked', false);
+                    $(that).parents(".sbcz").find(".d").attr('checked', false);
+                    form.render('checkbox');
+                    layer.closeAll('dialog');
+                }, function(){
+                    if(sw1=="true"){$(that).parents(".sbcz").find(".d").attr('checked', true);}
+                    if(sw3=="true"){$(that).parents(".sbcz").find(".b").attr('checked', true);}
+                    if(sw4=="true"){$(that).parents(".sbcz").find(".c").attr('checked', true);}
+                    $(that).parents(".sbcz").find(".a").attr('checked', false);
+                    form.render('checkbox');
+                });
+            }else{
+//                未选中状态
+            }
+        });
+        form.on('switch(switch2)', function(data){
+            var that=this;
+//            判断是否选中
+            var flag = this.checked ? 'true' : 'false';
+            var sw1="";
+            var sw2="";
+            var sw3="";
+            var sw4="";
+            sw1=$(that).closest('.sbcz').find('.layui-form-switch').eq(0).hasClass('layui-form-onswitch');
+            sw2=$(that).closest('.sbcz').find('.layui-form-switch').eq(1).hasClass('layui-form-onswitch');
+            sw3=$(that).closest('.sbcz').find('.layui-form-switch').eq(2).hasClass('layui-form-onswitch');
+            sw4=$(that).closest('.sbcz').find('.layui-form-switch').eq(3).hasClass('layui-form-onswitch');
+
+            if (flag =="true"){
+//                选中状态
+                layer.confirm('确定更改控制方式？', {
+                    offset:'350px',
+                    btn: ['确认','取消'] //按钮
+                }, function(){
+                    $(that).parents(".sbcz").find(".b").attr('checked', true);
+                    $(that).parents(".sbcz").find(".a").attr('checked', false);
+                    $(that).parents(".sbcz").find(".c").attr('checked', false);
+                    $(that).parents(".sbcz").find(".d").attr('checked', false);
+                    form.render('checkbox');
+                    layer.closeAll('dialog');
+                }, function(){
+                    if(sw1=="true"){$(that).parents(".sbcz").find(".d").attr('checked', true);}
+                    if(sw2=="true"){$(that).parents(".sbcz").find(".a").attr('checked', true);}
+                    if(sw4=="true"){$(that).parents(".sbcz").find(".c").attr('checked', true);}
+                    $(that).parents(".sbcz").find(".b").attr('checked', false);
+                    form.render('checkbox');
+                });
+            }else{
+//                未选中状态
+            }
+
+        });
+        form.on('switch(switch3)', function(data){
+            var that=this;
+//            判断是否选中
+            var flag = this.checked ? 'true' : 'false';
+            var sw1="";
+            var sw2="";
+            var sw3="";
+            var sw4="";
+            sw1=$(that).closest('.sbcz').find('.layui-form-switch').eq(0).hasClass('layui-form-onswitch');
+            sw2=$(that).closest('.sbcz').find('.layui-form-switch').eq(1).hasClass('layui-form-onswitch');
+            sw3=$(that).closest('.sbcz').find('.layui-form-switch').eq(2).hasClass('layui-form-onswitch');
+            sw4=$(that).closest('.sbcz').find('.layui-form-switch').eq(3).hasClass('layui-form-onswitch');
+
+            if (flag =="true"){
+//                选中状态
+                layer.confirm('确定更改控制方式？', {
+                    offset:'350px',
+                    btn: ['确认','取消'] //按钮
+                }, function(){
+                    $(that).parents(".sbcz").find(".c").attr('checked', true);
+                    $(that).parents(".sbcz").find(".a").attr('checked', false);
+                    $(that).parents(".sbcz").find(".b").attr('checked', false);
+                    $(that).parents(".sbcz").find(".d").attr('checked', false);
+                    form.render('checkbox');
+                    layer.closeAll('dialog');
+                }, function(){
+                    if(sw1=="true"){$(that).parents(".sbcz").find(".d").attr('checked', true);}
+                    if(sw2=="true"){$(that).parents(".sbcz").find(".a").attr('checked', true);}
+                    if(sw3=="true"){$(that).parents(".sbcz").find(".b").attr('checked', true);}
+                    $(that).parents(".sbcz").find(".c").attr('checked', false);
+                    form.render('checkbox');
+                });
+            }else{
+//                未选中状态
+            }
+        });
+        form.on('switch(switch4)', function(data){
+            var that=this;
+//            判断是否选中
+            var flag = this.checked ? 'true' : 'false';
+            var sw1="";
+            var sw2="";
+            var sw3="";
+            var sw4="";
+            sw1=$(that).closest('.sbcz').find('.layui-form-switch').eq(0).hasClass('layui-form-onswitch');
+            sw2=$(that).closest('.sbcz').find('.layui-form-switch').eq(1).hasClass('layui-form-onswitch');
+            sw3=$(that).closest('.sbcz').find('.layui-form-switch').eq(2).hasClass('layui-form-onswitch');
+            sw4=$(that).closest('.sbcz').find('.layui-form-switch').eq(3).hasClass('layui-form-onswitch');
+
+            if (flag =="true"){
+//                选中状态
+                layer.confirm('确定更改控制方式？', {
+                    offset:'350px',
+                    btn: ['确认','取消'] //按钮
+                }, function(){
+                    $(that).parents(".sbcz").find(".d").attr('checked', true);
+                    $(that).parents(".sbcz").find(".a").attr('checked', false);
+                    $(that).parents(".sbcz").find(".b").attr('checked', false);
+                    $(that).parents(".sbcz").find(".c").attr('checked', false);
+                    form.render('checkbox');
+                    layer.closeAll('dialog');
+                }, function(){
+                    if(sw1=="true"){$(that).parents(".sbcz").find(".b").attr('checked', true);}
+                    if(sw2=="true"){$(that).parents(".sbcz").find(".a").attr('checked', true);}
+                    if(sw3=="true"){$(that).parents(".sbcz").find(".c").attr('checked', true);}
+                    $(that).parents(".sbcz").find(".d").attr('checked', false);
+                    form.render('checkbox');
+                });
+            }else{
+//                未选中状态
+            }
+        });
+
+    })
+
+    //    设备操作记录
+    $("#poup").click(function(){
+        layer.open({
+            type: 2,
+            shadeClose: true,
+            title: '设备操作记录',
+            area: ['80%', '80%'],
+            content: 'main3-pop.html'
+        });
+    })
+    //    设备控制
+    $(".set").click(function(){
+
+        var control =  $(this).parents(".sbcz").find("em").text();
+
+        if(control=="ONOFFOFFOFF"){
+//            alert("远程控制")
+        }
+        else if(control=="OFFONOFFOFF"){
+//            alert("手动控制")
+            $(this).parents(".sbcz").css({"display":"none"});
+            $(this).parents(".sb").find(".sbsz1").css({"display":"block"});
+        }else if(control=="OFFOFFONOFF"){
+//            alert("定时控制")
+            $(this).parents(".sbcz").css({"display":"none"});
+            $(this).parents(".sb").find(".sbsz2").css({"display":"block"});
+        }else{
+//            alert("参数控制")
+            $(this).parents(".sbcz").css({"display":"none"});
+            $(this).parents(".sb").find(".sbsz3").css({"display":"block"});
+        }
+
+
+    });
+    $(".fh").click(function(){
+        $(this).parents(".sbsz").css({"display":"none"});
+        $(this).parents(".sb").find(".sbcz").css({"display":"block"});
+    });
+    $(".bc").click(function(){
+        $(this).parents(".sbsz").css({"display":"none"});
+        $(this).parents(".sb").find(".sbcz").css({"display":"block"});
+
+    });
+
+    var hasAuth = true; //控制按钮是否有权限
+
+
+    var form="";
+    layui.use(['form'], function() {
+        form = layui.form;
+        form.on('select(aihao)', function () {
+//            播放事件
+            getNowVideo();
+        });
+    })
+//    $(".sch").click(function(aihao){
+//        getNowVideo();
+//    })
+//
+    //视频窗口的大小
+    var winWidth = 787;
+    var winHeight = 541;
+    var isCenter = true;
+    var controlOrLoop = "control";
+    $(document).ready(function() {
+//      login();
+        getDataFromAjax();
+        $("#streamTypeSel").select({
+            liClickDefault: false
+        }); //清晰度下拉框
+        $(".channel-list ul").height(88).rollbar({
+            zIndex: 10,
+            pathPadding: '0px'
+        });
+        $(".video-replay .video-rep").height(280).rollbar({
+            zIndex: 10,
+            pathPadding: '0px'
+        });
+        $(".right .v-button").on('click', function(e) { //点击视频控制或视频回放选项卡
+            var obj = $(this);
+            if(!obj.hasClass("v-button-active")) { //未选中时
+                $(".right .v-button").removeClass("v-button-active");
+                $(".right .v-button i").removeClass("fh");
+                $(this).addClass("v-button-active");
+                $(this).find("i").addClass("fh");
+                if(obj.hasClass("play")) { //视频控制
+                    controlOrLoop = "control";
+                    $(".right-panl .controlss").css("z-index", "1");
+                    $("#streamType").show(); //显示vvv清晰度下拉框
+                } else { //视频回放
+                    controlOrLoop = "loop";
+                    $(".right-panl .controlss").css("z-index", "0");
+                    $("#streamType").hide(); //隐藏清晰度下拉框
+                }
+                stopAll();
+            }
+        });
+    });
+    //警告性弹窗
+    var showMsg=function(msg,time){
+        if(undefined==time){
+            time=1200;
+        }
+        var index=layer.msg(msg, {icon: 0,offset: '30px',shade: 0.1,time:time});
+        layer.style(index, {
+            boxShadow:'0 350px 300px rgba(0,0,0,0.2)'
+        });
+    }
+</script>
+
+</body>
+</html>

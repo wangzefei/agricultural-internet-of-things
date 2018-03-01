@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/css/basic.css"/>
+    <link rel="stylesheet" href="../public/css/main.css"/>
+    <link rel="stylesheet" href="../public/css/main1.css"/>
+    <link rel="stylesheet" href="../public/layui/css/layui.css"/>
+    <script src="../public/js/jquery-1.11.1.min.js"></script>
+    <script src="../public/js/dragscroll_micro.js"></script>
+    <script src="../public/js/browser.js"></script>
+    <link rel="stylesheet" href="../public/layui/css/layui.css"/>
+    <title>基地实景</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="m-body">
+
+    <!--头部导航，多个页面共用，以本业面头部为准-->
+
+    <form class="layui-form" action="">
+    <div class="m-header">
+        <div class="mh">
+            <div class="mh1">
+                <!--图片地址是logo-->
+                <div class="mh1-1 dl"> <!-- <img class="logo" src="" alt=""/>-->智慧农业云平台</div>
+                <div class="mh1-2 dl" style="position: relative">
+                    <div style="position: absolute;width: 100%;height: 100%;top: 0"></div>
+                    <iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=48" width="440" height="45" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+                </div>
+                <div class="mh1-3 dr">
+                    <a href="index.html"><div class="mh1-3s dr"><img src="../public/img/icon4.png" alt=""/> 退出登录</div></a>
+                    <div class="mh1-3s dr"><img src="../public/img/icon5.png" alt=""/>普通管理员：朱培林</div>
+                    <a href="map.html"><div class="mh1-3s dr"><img src="../public/img/icon3.png" alt=""/> 地图导航</div></a>
+                </div>
+            </div>
+            <div class="mh2">
+                <div class="mh2-1 dl">
+                    <div class="layui-input-inline" style="width: 150px">
+                        <select name="interest" lay-filter="aihao">
+                            <option value="">请选择区域</option>
+                            <option value="1" selected="">区域1</option>
+                            <option value="2">区域2</option>
+                            <option value="3">区域3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mh2-2 dl">
+                    <!--选中状态为nav-in-->
+                    <a href="main8-1.html"><div class="nav naved dr ">农事管理</div></a>
+                    <a href="main7-1.html"><div class="nav dr ">产品追溯</div></a>
+                    <a href="main6.html"><div class="nav dr ">告警管理</div></a>
+                    <a href="main5.html"><div class="nav dr ">历史数据</div></a>
+                    <a href="main4.html"><div class="nav dr ">视频监控</div></a>
+                    <a href="main3.html"><div class="nav dr ">设备控制</div></a>
+                    <a href="main2.html"><div class="nav dr ">实时数据</div></a>
+                    <a href="main1.html"><div class="nav dr nav-in">基地实景</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m-main">
+        <!--基地实景图拖动-->
+        <div id="father">
+            <div class="dragscroll free bg-pic" >
+                <!--背景大图-->
+                <img id="imgsrc" src="http://p3.so.qhimgs1.com/t015e017add0e021473.jpg"  ondragstart="return false;">
+                <!--区块位置-->
+                <div class="son pick" id="p1">
+                    <img src="../public/img/icon11.png" class="icon">
+                    <p>point1</p>
+                    <img src="../public/img/icon10.png">
+                </div>
+                <div class="son" id="p2">
+                    <p>point2</p>
+                    <img src="../public/img/icon10.png">
+                </div>
+                <div class="son" id="p3">
+                    <p>point3</p>
+                    <img src="../public/img/icon10.png">
+                </div>
+                <div class="son" id="p4">
+                    <p >point4point4point4point4</p>
+                    <img src="../public/img/icon10.png">
+                </div>
+                <div class="son" id="p5">
+                    <p>point5</p>
+                    <img src="../public/img/icon10.png">
+                </div>
+                <!--右侧数据-->
+
+            </div>
+            <!--数据栏-->
+            <div class="msgbox">
+                <div class="mm-box">
+                    <div class="box-title">
+                        <div class="btn">
+                            <span class="btn-icon" id="retract"><img src="../public/img/icon7.png" class="icon"></span>
+                            <span class="btn-icon" id="close"><img src="../public/img/icon12.png" class="icon"></span>
+                        </div>
+                        <div class="tab">
+                            <div class="tab-btn"  style="display: none">
+                                基地介绍
+                            </div>
+                            <div class="tab-btn  chosed">
+                                最新数据
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-con">
+                        <div class="sroll-con"  id="date">
+                            <div class="con-tr">
+                                <div class="td-pic">
+                                    <img src="../public/img/icon9.png">
+                                </div>
+                                <div class="td-con">
+                                    <p>雨量</p>
+                                    <p><span>--</span>mm</p>
+                                </div>
+                            </div>
+                            <div class="con-tr">
+                                <div class="td-pic">
+                                    <img src="../public/img/icon9.png">
+                                </div>
+                                <div class="td-con">
+                                    <p>光照</p>
+                                    <p><span>--</span>℃</p>
+                                </div>
+                            </div>
+                            <div class="con-tr">
+                                <div class="td-pic">
+                                    <img src="../public/img/icon9.png">
+                                </div>
+                                <div class="td-con">
+                                    <p>湿度</p>
+                                    <p><span>--</span>℃</p>
+                                </div>
+                            </div>
+                            <div class="con-tr">
+                                <div class="td-pic">
+                                    <img src="../public/img/icon9.png">
+                                </div>
+                                <div class="td-con">
+                                    <p>湿度</p>
+                                    <p><span>--</span>℃</p>
+                                </div>
+                            </div>
+                            <div class="con-tr">
+                                <div class="td-pic">
+                                    <img src="../public/img/icon9.png">
+                                </div>
+                                <div class="td-con">
+                                    <p>光照</p>
+                                    <p><span>--</span>℃</p>
+                                </div>
+                            </div>
+                            <div class="con-tr">
+                                <div class="td-pic">
+                                    <img src="../public/img/icon9.png">
+                                </div>
+                                <div class="td-con">
+                                    <p>湿度</p>
+                                    <p><span>--</span>℃</p>
+                                </div>
+                            </div>
+                            <div class="con-tr">
+                                <div class="td-pic">
+                                    <img src="../public/img/icon9.png">
+                                </div>
+                                <div class="td-con">
+                                    <p>湿度</p>
+                                    <p><span>--</span>℃</p>
+                                </div>
+                            </div>
+                            <div class="con-tr">
+                                <div class="td-pic">
+                                    <img src="../public/img/icon9.png">
+                                </div>
+                                <div class="td-con">
+                                    <p>湿度</p>
+                                    <p><span>--</span>℃</p>
+                                </div>
+                            </div>
+                            <div class="con-tr">
+                                <div class="td-pic">
+                                    <img src="../public/img/icon9.png">
+                                </div>
+                                <div class="td-con">
+                                    <p>光照</p>
+                                    <p><span>--</span>℃</p>
+                                </div>
+                            </div>
+                            <div class="con-tr">
+                                <div class="td-pic">
+                                    <img src="../public/img/icon9.png">
+                                </div>
+                                <div class="td-con">
+                                    <p>湿度</p>
+                                    <p><span>--</span>℃</p>
+                                </div>
+                            </div>
+                            <div class="con-tr">
+                                <div class="td-pic">
+                                    <img src="../public/img/icon9.png">
+                                </div>
+                                <div class="td-con">
+                                    <p>湿度</p>
+                                    <p><span>--</span>℃</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    </form>
+</div>
+
+<script src="../public/layui/layui.js"></script>
+<script type="text/javascript">
+    layui.use([ 'form'], function(){
+       var form = layui.form;
+    });
+
+    //点击切换的效果
+    var upDown=0;
+    $(".son").hover(function(){
+        $(this).width("120px");
+        $(this).children('img').addClass('img-hov');
+        $(this).children('p').css('left','9px')
+    },function(){
+        $(this).width("100px");
+        $(this).children('img').removeClass('img-hov');
+        $(this).children('p').css('left','0')
+    })
+
+    $('.tab-btn').click(function(){
+        var index=$(this).index();
+        $(this).addClass('chosed');
+        if(index==0){
+            $(this).next().toggleClass('chosed');
+            $('#introduce').css('display','block');
+            $('#date').css('display','none');
+        }else{
+            $(this).prev().toggleClass('chosed');
+            $('#introduce').css('display','none');
+            $('#date').css('display','block');
+        }
+    })
+    $('#retract').click(function(){
+        if(upDown==0){
+            $(this).parents('.box-title').next().animate({height:'0px'});
+            $(this).children('img').attr('src','../public/img/icon7.png');
+            upDown=1;
+        }else{
+            upDown=0;
+            $(this).parents('.box-title').next().animate({height:'400px'});
+            $(this).children('img').attr('src','../public/img/icon8.png');
+        }
+    })
+    $('#close').click(function(){
+        $(this).parents('.msgbox').fadeOut(1500);
+    })
+    $('.son').click(function(){
+        var right=$('.msgbox').css('right');
+        var height=$('.box-con').height();
+        if(right=="-500px"){
+            $('.msgbox').animate({right:'0px'});
+        }
+        $('.pick').find('img').remove('.icon');
+        $(this).addClass('pick');
+        $(this).prepend('<img src="../public/img/icon6.png" class="icon">')
+    })
+</script>
+</body>
+</html>

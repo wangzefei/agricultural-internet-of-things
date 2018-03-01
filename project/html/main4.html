@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../public/css/nwt.css" />
+    <link rel="stylesheet" href="../public/css/basic.css"/>
+    <link rel="stylesheet" href="../public/css/main.css"/>
+    <link rel="stylesheet" href="../public/layui/css/layui.css"/>
+    <link rel="stylesheet" href="../public/css/jquery.rollbar.css" />
+    <script src="../public/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../public/js/jquery.mousewheel.pack.js" ></script>
+    <script type="text/javascript" src="../public/js/jquery.rollbar.min.js" ></script>
+    <title>视频监控</title>
+    <style>
+        .content {position: relative;width: 1270px;height: 550px;margin: 0 auto;padding-top: 0;}
+        .status_text {position: absolute;top: 180px;left: 30px;width: 50px;height: 20px;}
+    </style>
+</head>
+<body>
+<div class="m-body">
+    <!--头部导航，多个页面共用-->
+    <div class="m-header">
+        <div class="mh">
+            <div class="mh1">
+                <div class="mh1-1 dl">智慧农业云平台</div>
+                <div class="mh1-2 dl"></div>
+                <div class="mh1-3 dr">
+                    <a href="index.html"><div class="mh1-3s dr"><img src="../public/img/icon4.png" alt=""/> 退出登录</div></a>
+                    <div class="mh1-3s dr"><img src="../public/img/icon5.png" alt=""/>普通管理员：朱培林</div>
+                    <a href="map.html"><div class="mh1-3s dr"><img src="../public/img/icon3.png" alt=""/> 地图导航</div></a>
+                </div>
+            </div>
+            <div class="mh2">
+                <form action="" class="layui-form">
+                    <div class="mh2-1 dl">
+                        <div class="layui-input-inline" style="width: 150px">
+                            <select name="interest" lay-filter="aihao">
+                                <option value="">请选择区域</option>
+                                <option value="1" selected="">区域1</option>
+                                <option value="2">区域2</option>
+                                <option value="3">区域3</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="mh2-2 dl">
+                    <!--选中状态为nav-in-->
+                    <a href="main8-1.html"><div class="nav naved dr ">农事管理</div></a>
+                    <a href="main7-1.html"><div class="nav dr ">产品追溯</div></a>
+                    <a href="main6.html"><div class="nav dr ">告警管理</div></a>
+                    <a href="main5.html"><div class="nav dr ">历史数据</div></a>
+                    <a href="main4.html"><div class="nav dr nav-in ">视频监控</div></a>
+                    <a href="main3.html"><div class="nav dr ">设备控制</div></a>
+                    <a href="main2.html"><div class="nav dr ">实时数据</div></a>
+                    <a href="main1.html"><div class="nav dr ">基地实景</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-main">
+
+        <div class="video-sp" style="width: 100%;margin-top: 120px">
+
+            <div class="contain content-panl">
+                <div class="content">
+                    <div class="fp-panal">
+                        <!--分屏切换事件在video.js的【分屏切换事件】-->
+                        <div id="splitWins">
+                            <div id="1" class="one fp" title="单分屏"></div>
+                            <div id="2" class="four fp" title="四分屏"></div>
+                            <div id="3" class="nine fp" title="九分屏"></div>
+                            <div id="4" class="twl fp active" title="十六分屏"></div>
+                        </div>
+                        <!--是否在录制中或对讲中的提示信息,事件在video.js的【showDoing()】-->
+                        <div id="showDoing" class="status_text"></div>
+                        <!--是否对讲，录制的提示信息-->
+                        <div class="selects" id="streamTypeSel" style="visibility: hidden;">
+                            <div class="name-input">
+                                <input id="streamType" class="name-input" readonly="readonly" type="text" value="标清">
+                            </div>
+                            <ul style="display: none; width: 77px;">
+                                <li value="2" class="no" style="width: 77px;">标清</li>
+                                <li value="1" class="no active" style="width: 77px;">高清</li>
+                            </ul>
+                        </div>
+                        <div class="bottom">
+                            <a id="fullscreen" href="javascript:void(0);" title="全屏" class="fullscran"></a>
+                            <a id="downPicture" href="javascript:void(0);" title="截屏" class="caram"></a>
+                        </div>
+                    </div>
+                    <div class="video" id="video"><embed align="center" type="application/webvideo-plugin-kit" width="100%" height="100%" name="webVideoCtrl20171109090246" wndtype="1" playmode="2" colors=""></div>
+                    <div class="right" style="right: 0;">
+                        <div class="right-panl">
+                            <div class="controlss">
+                                <div class="d-control">
+                                    <div class="d-list">
+                                        <a href="javascript:void(0);" class="d1" onmousedown="mouseDownPTZControl(5);" onmouseup="mouseUpPTZControl();"></a>
+                                        <a href="javascript:void(0);" class="d2" onmousedown="mouseDownPTZControl(1);" onmouseup="mouseUpPTZControl();"></a>
+                                        <a href="javascript:void(0);" class="d3" onmousedown="mouseDownPTZControl(7);" onmouseup="mouseUpPTZControl();"></a>
+                                        <a href="javascript:void(0);" class="d4" onmousedown="mouseDownPTZControl(3);" onmouseup="mouseUpPTZControl();"></a>
+                                        <a href="javascript:void(0);" class="d5" onmousedown="mouseDownPTZControl(9);" onmouseup="mouseUpPTZControl();"></a>
+                                        <a href="javascript:void(0);" class="d6" onmousedown="mouseDownPTZControl(4);" onmouseup="mouseUpPTZControl();"></a>
+                                        <a href="javascript:void(0);" class="d7" onmousedown="mouseDownPTZControl(6);" onmouseup="mouseUpPTZControl();"></a>
+                                        <a href="javascript:void(0);" class="d8" onmousedown="mouseDownPTZControl(2);" onmouseup="mouseUpPTZControl();"></a>
+                                        <a href="javascript:void(0);" class="d9" onmousedown="mouseDownPTZControl(8);" onmouseup="mouseUpPTZControl();"></a>
+                                    </div>
+                                </div>
+                                <div class="d-func">
+                                    <div class="func-list">
+                                        <div class="d-zoom" style="margin-top: 10px;">
+                                            <div class="d-sound-right" style="float: left;width: 80px;height: 34px;">
+                                                <p class="big" title="录制" onclick="clickStartRecord();"></p>
+
+                                                <p class="sm" title="停止录制" onclick="clickStopRecord();"></p>
+                                            </div>
+                                            <div class="d-zoom-right">
+                                                <p class="big" title="开音" onclick="clickOpenSound();"></p>
+
+                                                <p class="sm" title="关音" onclick="clickCloseSound();"></p>
+                                            </div>
+                                        </div>
+                                        <div class="d-photo" style="margin-top: 40px;">
+                                            <a id="close" style="float: right;margin-right: 15px" href="javascript:void(0);" class="photo-now">关闭当前视频</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 通道列表 -->
+                                <div class="channel-list" style="height: 200px;">
+                                    <div class="channel-control" id="channelList" style="position: relative;height: 200px;">
+                                        <ul id="cameraList" style="height: 200px !important; position: relative; overflow: hidden;">
+                                            <div class="rollbar-path-vertical" style="z-index: 10; top: 2px; height: 84px;">
+                                                <div class="rollbar-handle" style="height: 30%; opacity: 1;"></div>
+                                            </div>
+                                            <div class="rollbar-path-horizontal" style="z-index: 10; display: none; left: 2px; width: 306px;">
+                                                <div class="rollbar-handle" style="width: 30%; opacity: 1;"></div>
+                                            </div>
+                                            <div class="rollbar-content" style="position: relative; top: 0px; left: 0px; overflow: hidden;">
+
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="pos-pot" id="some_tip" style="border: 1px solid #989898;margin-top: 100px;height: 150px;border-radius: 0.5em;overflow-y: auto;">
+
+                                </div>
+                            </div>
+                            <div class="loop-control">
+                                <div class="top-button">
+                                    <ul>
+                                        <li>
+                                            <label>设备：</label>
+                                            <select id="loginCamera" style="width: 152px;height: 25px;float: left;">
+                                                <option value="">请选择设备</option>
+                                            </select>
+                                            <i id="cLogin" class="cLogin" title="搜索中..."></i>
+                                        </li>
+                                        <li>
+                                            <label>开始时间：</label>
+                                            <input class="timecan" type="text" id="startTime"  readonly="">
+                                        </li>
+                                        <li>
+                                            <label>结束时间：</label>
+                                            <input class="timecan" type="text" id="endTime"  readonly="">
+                                        </li>
+                                        <li>
+                                            <div class="search" onclick="videoSearch(0);"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="video-replay">
+                                    <div id="videoFiles" class="video-rep" style="height: 280px; position: relative; overflow: hidden;">
+                                        <div class="rollbar-path-vertical" style="z-index: 10; display: none; top: 0px; height: 280px;">
+                                            <div class="rollbar-handle" style="height: 30%; opacity: 1;"></div>
+                                        </div>
+                                        <div class="rollbar-path-horizontal" style="z-index: 10; display: none; left: 0px; width: 260px;">
+                                            <div class="rollbar-handle" style="width: 30%; opacity: 1;"></div>
+                                        </div>
+                                        <div class="rollbar-content" style="position: relative; top: 0px; left: 0px; overflow: hidden;">
+                                            <ul id="searchList"></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 播放控制-->
+                                <div class="play-control">
+                                    <a href="javascript:startPlayback();" title="播放" class="vv-play"></a>
+                                    <a href="javascript:closeOne();" title="停止" class="vv-close"></a>
+                                    <a href="javascript:nextOne();" title="下一个" class="vv-next"></a>
+                                </div>
+                                <!-- end 播放控制-->
+                            </div>
+                        </div>
+                        <div class="play v-button v-button-active">
+                            <i class="fh" style="height: 20px;"></i>
+                            <p>视频控制</p>
+                        </div>
+                        <div class="loop v-button">
+                            <i style="height: 20px"></i>
+                            <p>视频回放</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="display:none;">
+                <!--对讲通道-->
+                <select id="audioChannels" class="sel"> </select>
+                <!--云台速度-->
+                <select id="ptzspeed" class="sel">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option selected="">4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                </select>
+
+                <!--预览抓图保存路径-->
+                <input id="previewPicPath" type="text" class="txt">
+                <input type="button" class="btn" value="浏览" onclick="clickOpenFileDlg(&#39;previewPicPath&#39;, 0);"> 录像文件保存路径
+                <input id="recordPath" type="text" class="txt">
+                <input type="button" class="btn" value="浏览" onclick="clickOpenFileDlg(&#39;recordPath&#39;, 0);"> 回放抓图文件保存路径
+                <input id="playbackPicPath" type="text" class="txt">
+                <input type="button" class="btn" value="浏览" onclick="clickOpenFileDlg(&#39;playbackPicPath&#39;, 0);"> 回放下载保存路径
+                <input id="downloadPath" type="text" class="txt">
+                <input type="button" class="btn" value="浏览" onclick="clickOpenFileDlg(&#39;downloadPath&#39;, 0);">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="../public/layui/layui.js"></script>
+<script>
+    var layer = "";
+    layui.use(['form',"laydate","layer"], function() {
+        var form = layui.form;
+        var laydate =layui.laydate;
+        layer = layui.layer;
+        laydate.render({
+            elem: '#startTime'
+            ,type: 'datetime'
+        });
+        laydate.render({
+            elem: '#endTime'
+            ,type: 'datetime'
+        });
+    })
+
+   
+</script>
+
+<!--海康插件核心JS文件-->
+<script src="../public/js/webVideoCtrl.js"></script>
+<!--操作文件-->
+<script src="../public/js/video.js"></script>
+<script>
+    var hasAuth = true; //控制按钮是否有权限
+</script>
+<script>
+    //初始化日期事件选择器
+
+    //视频窗口的大小
+    var winWidth = 787;
+    var winHeight = 541;
+    var isCenter = true;
+    var controlOrLoop = "control";
+    $(document).ready(function() {
+        login();
+        $("#streamTypeSel").select({
+            liClickDefault: false
+        }); //清晰度下拉框
+        $(".channel-list ul").height(88).rollbar({
+            zIndex: 10,
+            pathPadding: '0px'
+        });
+        $(".video-replay .video-rep").height(280).rollbar({
+            zIndex: 10,
+            pathPadding: '0px'
+        });
+        $(".right .v-button").on('click', function(e) { //点击视频控制或视频回放选项卡
+            var obj = $(this);
+            if(!obj.hasClass("v-button-active")) { //未选中时
+                $(".right .v-button").removeClass("v-button-active");
+                $(".right .v-button i").removeClass("fh");
+                $(this).addClass("v-button-active");
+                $(this).find("i").addClass("fh");
+                if(obj.hasClass("play")) { //视频控制
+                    controlOrLoop = "control";
+                    $(".right-panl .controlss").css("z-index", "1");
+                    $("#streamType").show(); //显示清晰度下拉框
+                } else { //视频回放
+                    controlOrLoop = "loop";
+                    $(".right-panl .controlss").css("z-index", "0");
+                    $("#streamType").hide(); //隐藏清晰度下拉框
+                }
+                stopAll();
+            }
+        });
+    });
+    //警告性弹窗
+    var showMsg=function(msg,time){
+        if(undefined==time){
+            time=1200;
+        }
+        var index=layer.msg(msg, {icon: 0,offset: '150px',shade: 0.1,time:time});
+        layer.style(test, {
+            boxShadow:'0 10px 10px rgba(0,0,0,0.2)'
+        });
+    }
+</script>
+
+
+</body>
+</html>

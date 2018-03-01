@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../public/css/basic.css"/>
+    <link rel="stylesheet" href="../public/css/main.css"/>
+    <link rel="stylesheet" href="../public/layui/css/layui.css"/>
+    <script src="../public/js/echarts.js"></script>
+    <script src="../public/js/jquery-1.11.1.min.js"></script>
+    <title>图片中心</title>
+    <style>
+
+
+    </style>
+</head>
+<body>
+<form action="" class="layui-form">
+
+
+<!--左边侧边栏-->
+<div class="left" >
+    <a href="main2.html"><div class="left1">数据中心</div></a>
+    <a href="main2-2.html"><div class="left1   ck-in">图片中心</div></a>
+</div>
+
+<div class="m-body">
+    <!--头部导航，多个页面共用-->
+    <div class="m-header">
+        <div class="mh">
+            <div class="mh1">
+                <div class="mh1-1 dl">LOGO智慧农业云平台</div>
+                <div class="mh1-2 dl">
+
+                </div>
+                <div class="mh1-3 dl">
+                    <a href="index.html"><div class="mh1-3s dr"><img src="../public/img/icon4.png" alt=""/> 退出登录</div></a>
+                    <div class="mh1-3s dr"><img src="../public/img/icon5.png" alt=""/>普通管理员：朱培林</div>
+                    <a href="map.html"><div class="mh1-3s dr"><img src="../public/img/icon3.png" alt=""/> 地图导航</div></a>
+                </div>
+            </div>
+            <div class="mh2">
+                <div class="mh2-1 dl">
+                    <div class="layui-input-inline" style="width: 150px">
+                        <select name="interest" lay-filter="aihao">
+                            <option value="">请选择区域</option>
+                            <option value="1" selected="">区域1</option>
+                            <option value="2">区域2</option>
+                            <option value="3">区域3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mh2-2 dl">
+                    <!--选中状态为nav-in-->
+                    <a href="main8-1.html"><div class="nav naved dr ">农事管理</div></a>
+                    <a href="main7-1.html"><div class="nav dr ">产品追溯</div></a>
+                    <a href="main6.html"><div class="nav dr ">告警管理</div></a>
+                    <a href="main5.html"><div class="nav dr ">历史数据</div></a>
+                    <a href="main4.html"><div class="nav dr ">视频监控</div></a>
+                    <a href="main3.html"><div class="nav dr ">设备控制</div></a>
+                    <a href="main2.html"><div class="nav dr  nav-in">实时数据</div></a>
+                    <a href="main1.html"><div class="nav dr ">基地实景</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="ss1">
+            <form class="layui-form" action="">
+                <div class="layui-input-inline fl">
+                    <div class="layui-input-block" style="width: 150px;margin-left:0">
+                        <select name="interest" lay-filter="aihao">
+                            <option value="">全部</option>
+                            <option value="0"  selected="">苗情</option>
+                            <option value="1">虫情</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-input-inline fl ml20" >
+                    <div class="layui-input-block" style="width: 150px;margin-left: 0">
+                        <select name="interest" lay-filter="aihao">
+                            <option value="">选择设备</option>
+                            <option value="0">墒情图像</option>
+                            <option value="1" selected="">大棚</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label" style="text-align: left;width:80px;">开始时间</label>
+                    <div class="layui-input-inline" style="margin-left:5px;width: 100px">
+                        <input type="text" class="layui-input" id="date1" >
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">结束时间</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" id="date2" style="width: 100px" >
+                    </div>
+                </div>
+                <input type="submit" class="layui-btn ml20 " value="搜索"/>
+                <button  class="layui-btn ml20">切换为正序</button>
+                <button  class="layui-btn ml20">下载</button>
+            </form>
+
+        </div>
+        <div class="pic-cont" >
+            <div class="pcon">
+                <div><img src="../public/img/pic2.jpg" alt=""/></div>
+                <div class="pcon1">2015-09-22  12:28:48</div>
+                <div class="pcon1">苗情</div>
+            </div>
+            <div class="pcon">
+                <div><img src="../public/img/pic2.jpg" alt=""/></div>
+                <div class="pcon1">2015-09-22  12:28:48</div>
+                <div class="pcon1">苗情</div>
+            </div>
+            <div class="pcon">
+                <div><img src="../public/img/pic2.jpg" alt=""/></div>
+                <div class="pcon1">2015-09-22  12:28:48</div>
+                <div class="pcon1">苗情</div>
+            </div>
+            <div class="pcon">
+                <div><img src="../public/img/pic2.jpg" alt=""/></div>
+                <div class="pcon1">2015-09-22  12:28:48</div>
+                <div class="pcon1">苗情</div>
+            </div>
+            <div class="pcon">
+                <div><img src="../public/img/pic2.jpg" alt=""/></div>
+                <div class="pcon1">2015-09-22  12:28:48</div>
+                <div class="pcon1">苗情</div>
+            </div>
+            <div class="pcon">
+                <div><img src="../public/img/pic2.jpg" alt=""/></div>
+                <div class="pcon1">2015-09-22  12:28:48</div>
+                <div class="pcon1">苗情</div>
+            </div>
+            <div class="pcon">
+                <div><img src="../public/img/pic2.jpg" alt=""/></div>
+                <div class="pcon1">2015-09-22  12:28:48</div>
+                <div class="pcon1">苗情</div>
+            </div>
+            <div class="pcon">
+                <div><img src="../public/img/pic2.jpg" alt=""/></div>
+                <div class="pcon1">2015-09-22  12:28:48</div>
+                <div class="pcon1">苗情</div>
+            </div>
+            <div class="pcon">
+                <div><img src="../public/img/pic2.jpg" alt=""/></div>
+                <div class="pcon1">2015-09-22  12:28:48</div>
+                <div class="pcon1">苗情</div>
+            </div>
+            <div class="pcon">
+                <div><img src="../public/img/pic2.jpg" alt=""/></div>
+                <div class="pcon1">2015-09-22  12:28:48</div>
+                <div class="pcon1">苗情</div>
+            </div>
+            <div class="pcon">
+                <div><img src="../public/img/pic2.jpg" alt=""/></div>
+                <div class="pcon1">2015-09-22  12:28:48</div>
+                <div class="pcon1">苗情</div>
+            </div>
+            <div class="pcon">
+                <div><img src="../public/img/pic2.jpg" alt=""/></div>
+                <div class="pcon1">2015-09-22  12:28:48</div>
+                <div class="pcon1">苗情</div>
+            </div>
+            <div class="pcon">
+                <div><img src="../public/img/pic2.jpg" alt=""/></div>
+                <div class="pcon1">2015-09-22  12:28:48</div>
+                <div class="pcon1">苗情</div>
+            </div>
+            <div class="pcon">
+                <div><img src="../public/img/pic2.jpg" alt=""/></div>
+                <div class="pcon1">2015-09-22  12:28:48</div>
+                <div class="pcon1">苗情</div>
+            </div>
+            <div class="pcon">
+                <div><img src="../public/img/pic2.jpg" alt=""/></div>
+                <div class="pcon1">2015-09-22  12:28:48</div>
+                <div class="pcon1">苗情</div>
+            </div>
+        </div>
+
+        <div class="fy">这里放分页</div>
+
+    </div>
+
+    </div>
+</form>
+</div>
+
+<script src="../public/layui/layui.js"></script>
+<script>
+    layui.use(['form','laydate'], function() {
+        var form = layui.form;
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#date1'
+        });
+        laydate.render({
+            elem: '#date2'
+        });
+    })
+
+
+
+
+</script>
+
+</body>
+</html>

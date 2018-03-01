@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/css/basic.css"/>
+    <link rel="stylesheet" href="../public/css/main.css"/>
+    <link rel="stylesheet" href="../public/css/main1.css"/>
+    <link rel="stylesheet" href="../public/layui/css/layui.css"/>
+    <script src="../public/js/jquery-1.11.1.min.js"></script>
+    <title>基地实景</title>
+    <style>
+        .no-date{width: 100%;text-align: center;padding-top: 100px}
+    </style>
+</head>
+<body>
+<div class="m-body">
+    <form class="layui-form" action="">
+    <div class="m-header">
+        <div class="mh">
+            <div class="mh1">
+                <!--图片地址是logo-->
+                <div class="mh1-1 dl"> <!-- <img class="logo" src="" alt=""/>-->智慧农业云平台</div>
+                <div class="mh1-2 dl" style="position: relative">
+                    <div style="position: absolute;width: 100%;height: 100%;top: 0"></div>
+                    <iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=48" width="440" height="45" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+                </div>
+                <div class="mh1-3 dr">
+                    <a href="index.html"><div class="mh1-3s dr"><img src="../public/img/icon4.png" alt=""/> 退出登录</div></a>
+                    <div class="mh1-3s dr"><img src="../public/img/icon5.png" alt=""/>普通管理员：朱培林</div>
+                    <a href="map.html"><div class="mh1-3s dr"><img src="../public/img/icon3.png" alt=""/> 地图导航</div></a>
+                </div>
+            </div>
+            <div class="mh2">
+                <div class="mh2-1 dl">
+                    <div class="layui-input-inline" style="width: 150px">
+                        <select name="interest" lay-filter="aihao">
+                            <option value="">请选择区域</option>
+                            <option value="1" selected="">区域1</option>
+                            <option value="2">区域2</option>
+                            <option value="3">区域3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mh2-2 dl">
+                    <!--选中状态为nav-in-->
+                    <a href="main8-1.html"><div class="nav naved dr ">农事管理</div></a>
+                    <a href="main7-1.html"><div class="nav dr ">产品追溯</div></a>
+                    <a href="main6.html"><div class="nav dr ">告警管理</div></a>
+                    <a href="main5.html"><div class="nav dr ">历史数据</div></a>
+                    <a href="main4.html"><div class="nav dr ">视频监控</div></a>
+                    <a href="main3.html"><div class="nav dr ">设备控制</div></a>
+                    <a href="main2.html"><div class="nav dr ">实时数据</div></a>
+                    <a href="main1.html"><div class="nav dr nav-in">基地实景</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="no-date">
+         <img src="../public/img/nodate.jpg" alt=""/>
+     </div>   
+
+    </form>
+</div>
+
+<script src="../public/layui/layui.js"></script>
+<script>
+    layui.use([ 'form'], function(){
+        var form = layui.form;
+    });
+</script>
+
+</body>
+</html>

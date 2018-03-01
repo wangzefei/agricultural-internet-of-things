@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/css/basic.css"/>
+    <link rel="stylesheet" href="../public/css/main.css"/>
+    <link rel="stylesheet" href="../public/layui/css/layui.css"/>
+    <script src="../public/js/jquery-1.11.1.min.js"></script>
+    <title>采收管理</title>
+    <style></style>
+</head>
+<body>
+<!--左边侧边栏-->
+<form class="layui-form" action="">
+<div class="left" >
+    <a href="main8-1.html"><div class="left1 ">农事操作</div></a>
+    <a href="main8-2.html"><div class="left1">库存管理</div></a>
+    <a href="main8-5.html"> <div class="left1 ck-in">采收管理</div></a>
+
+</div>
+<div class="m-body">
+    <!--头部导航，多个页面共用-->
+    <div class="m-header">
+        <div class="mh">
+            <div class="mh1">
+                <div class="mh1-1 dl">LOGO智慧农业云平台</div>
+                <div class="mh1-2 dl">
+
+                </div>
+                <div class="mh1-3 dr">
+                    <a href="index.html"><div class="mh1-3s dr"><img src="../public/img/icon4.png" alt=""/> 退出登录</div></a>
+                    <div class="mh1-3s dr"><img src="../public/img/icon5.png" alt=""/>普通管理员：朱培林</div>
+                    <a href="map.html"><div class="mh1-3s dr"><img src="../public/img/icon3.png" alt=""/> 地图导航</div></a>
+                </div>
+            </div>
+            <div class="mh2">
+                <div class="mh2-1 dl">
+                    <div class="layui-input-inline" style="width: 150px">
+                        <select name="interest" lay-filter="aihao">
+                            <option value="">请选择区域</option>
+                            <option value="1" selected="">区域1</option>
+                            <option value="2">区域2</option>
+                            <option value="3">区域3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mh2-2 dl">
+                    <!--选中状态为nav-in-->
+                    <a href="main8-1.html"><div class="nav naved dr nav-in">生产管理</div></a>
+                    <a href="main7-1.html"><div class="nav dr ">产品追溯</div></a>
+                    <a href="main6.html"><div class="nav dr ">告警管理</div></a>
+                    <a href="main5.html"><div class="nav dr ">历史数据</div></a>
+                    <a href="main4.html"><div class="nav dr ">视频监控</div></a>
+                    <a href="main3.html="><div class="nav dr  ">设备控制</div></a>
+                    <a href="main2.html"><div class="nav dr ">实时数据</div></a>
+                    <a href="main1.html"><div class="nav dr ">基地实景</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m-main">
+        <div class="main">
+            <div class="ss1">
+                    <div class="layui-input-inline fl   mb30" >
+                        <label class="layui-form-label"  style="padding-left: 0;text-align: left;width:70px;">生产区块：</label>
+                        <div class="layui-input-block" style="width: 120px;margin-left: 90px">
+                            <select name="interest" lay-filter="aihao">
+                                <option value="">区块1</option>
+                                <option value="0">区块2</option>
+                                <option value="1" selected="">区块3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-input-inline fl ml20  mb30" >
+                        <label class="layui-form-label"  style="padding-left: 0;text-align: left;width: 70px;">生产作物：</label>
+                        <div class="layui-input-block" style="width: 120px;margin-left: 90px">
+                            <select name="interest" lay-filter="aihao">
+                                <option value=""></option>
+                                <option value="0">番薯</option>
+                                <option value="1" selected="">土豆</option>
+                                <option value="2">芋头</option>
+                                <option value="3">白菜</option>
+                                <option value="4">芝麻</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-input-inline fl ml20  mb30" >
+                        <label class="layui-form-label"  style="padding-left: 0;text-align: left;width:50px;">批次：</label>
+                        <div class="layui-input-block" style="width: 120px;margin-left: 70px">
+                            <select name="interest" lay-filter="aihao">
+                                <option value=""></option>
+                                <option value="0">01</option>
+                                <option value="1" selected="">02</option>
+                                <option value="2">03</option>
+                                <option value="3">04</option>
+                                <option value="4">05</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-inline  mb30">
+                        <label class="layui-form-label" style="padding-left: 0;width:80px;">选择日期</label>
+                        <div class="layui-input-inline" style="margin-left:5px;width: 100px">
+                            <input type="text" class="layui-input" id="date1" >
+                        </div>
+                    </div>
+                    <div class="layui-inline  mb30">
+                        <label class="layui-form-label" style="width:20px">至</label>
+                        <div class="layui-input-inline" style="width: 100px">
+                            <input type="text" class="layui-input" id="date2" >
+                        </div>
+                    </div>
+                    <button  class="layui-btn ml20  mb30">查询</button>
+                    <div  class="layui-btn ml20 add  mb30">新增</div>
+
+            </div>
+            <div class="table">
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>采收日期</th>
+                        <th>种植地块</th>
+                        <th>种植面积</th>
+                        <th>作物品种</th>
+                        <th>批次名称</th>
+                        <th>采收总量</th>
+                        <th>产品码</th>
+                        <th>二维码</th>
+                        <th>操作人</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2017-12-12</td>
+                        <td>大棚监控</td>
+                        <td>10亩</td>
+                        <td>芝麻 </td>
+                        <td>芝麻001</td>
+                        <td>50kg</td>
+                        <td>234234234523423</td>
+                        <td></td>
+                        <td>朱培林</td>
+                        <td> <span class="dj bj">编辑</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div class="fy">这里是分页</div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+</form>
+<script src="../public/layui/layui.js"></script>
+<script>
+    layui.use(['form',], function() {
+        var form = layui.form;
+
+    })
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //时间选择器
+        $(".layui-time").each(function () {
+            laydate.render({
+                elem: this, //指定元素
+            });
+        });
+    });
+    $(".add").click(function () {
+        layer.open({
+            type: 2,
+            shadeClose: true,
+            title: '新增采收',
+            area: ['60%', '60%'],
+            content: 'main8-5pop.html'
+        });
+    });
+
+    $(".bj").click(function () {
+        layer.open({
+            type: 2,
+            shadeClose: true,
+            title: '编辑采收',
+            area: ['60%', '60%'],
+            content: 'main8-5pop.html'
+        });
+    });
+
+
+
+</script>
+
+
+</body>
+</html>

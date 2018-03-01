@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/css/basic.css"/>
+    <link rel="stylesheet" href="../public/css/main.css"/>
+    <link rel="stylesheet" href="../public/layui/css/layui.css"/>
+    <script src="../public/js/jquery-1.11.1.min.js"></script>
+    <title>出库管理</title>
+    <style>
+        .layme1{padding-left: 0;text-align: left;width:70px;}
+        .layme2{width: 120px;margin-left: 90px}
+    </style>
+</head>
+<body>
+<!--左边侧边栏-->
+<form class="layui-form" action="">
+    <div class="left" >
+        <a href="main8-1.html"><div class="left1 ">农事操作</div></a>
+        <a href="main8-2.html"><div class="left1 ck-in" >库存管理</div></a>
+    </div>
+    <div class="m-body">
+        <!--头部导航，多个页面共用-->
+        <div class="m-header">
+            <div class="mh">
+                <div class="mh1">
+                    <div class="mh1-1 dl">LOGO智慧农业云平台</div>
+                    <div class="mh1-2 dl">
+
+                    </div>
+                    <div class="mh1-3 dr">
+                        <a href="index.html"><div class="mh1-3s dr"><img src="../public/img/icon4.png" alt=""/> 退出登录</div></a>
+                        <div class="mh1-3s dr"><img src="../public/img/icon5.png" alt=""/>普通管理员：朱培林</div>
+                        <a href="map.html"><div class="mh1-3s dr"><img src="../public/img/icon3.png" alt=""/> 地图导航</div></a>
+                    </div>
+                </div>
+                <div class="mh2">
+                    <div class="mh2-1 dl">
+                        <div class="layui-input-inline" style="width: 150px">
+                            <select name="interest" lay-filter="aihao">
+                                <option value="">请选择区域</option>
+                                <option value="1" selected="">区域1</option>
+                                <option value="2">区域2</option>
+                                <option value="3">区域3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mh2-2 dl">
+                        <!--选中状态为nav-in-->
+                        <a href="main8-1.html"><div class="nav naved dr nav-in">生产管理</div></a>
+                        <a href="main7-1.html"><div class="nav dr ">产品追溯</div></a>
+                        <a href="main6.html"><div class="nav dr ">告警管理</div></a>
+                        <a href="main5.html"><div class="nav dr ">历史数据</div></a>
+                        <a href="main4.html"><div class="nav dr ">视频监控</div></a>
+                        <a href="main3.html="><div class="nav dr  ">设备控制</div></a>
+                        <a href="main2.html"><div class="nav dr ">实时数据</div></a>
+                        <a href="main1.html"><div class="nav dr ">基地实景</div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-main">
+            <div class="main">
+                <div class="ss1">
+                    <div class="layui-input-inline fl   mb30" >
+                        <label class="layui-form-label layme1"  >品类：</label>
+                        <div class="layui-input-block layme2" style="">
+                            <select name="interest" >
+                                <option value="">所有</option>
+                                <option value="0">化肥</option>
+                                <option value="1" selected="">农药</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-input-inline fl ml20  mb30" >
+                        <label class="layui-form-label layme1"  >名称：</label>
+                        <div class="layui-input-block layme2" >
+                            <select name="interest" >
+                                <option value="">所有</option>
+                                <option value="0">金坷垃</option>
+                                <option value="1" selected="">银坷垃</option>
+                                <option value="2">钻石坷垃</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-input-inline fl ml20  mb30" >
+                        <label class="layui-form-label layme1"  >品牌：</label>
+                        <div class="layui-input-block layme2">
+                            <select name="interest" >
+                                <option value="">所有</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-inline  mb30">
+                        <label class="layui-form-label" style="padding-left: 0;width:80px;">选择日期</label>
+                        <div class="layui-input-inline" style="margin-left:5px;width: 100px">
+                            <input type="text" class="layui-input layui-time"  >
+                        </div>
+                    </div>
+                    <div class="layui-inline  mb30">
+                        <label class="layui-form-label" style="width:20px">至</label>
+                        <div class="layui-input-inline" style="width: 100px">
+                            <input type="text" class="layui-input layui-time"  >
+                        </div>
+                    </div>
+                    <button  class="layui-btn ml20  mb30">查询</button>
+                    <div  class="layui-btn ml20 add  mb30">新增</div>
+                    <div  class="layui-btn ml20 add  mb30">导出</div>
+
+                </div>
+                <div class="table">
+                    <table class="layui-table">
+
+                        <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>出库批次</th>
+                            <th>出库日期</th>
+                            <th>出库编码</th>
+                            <th>入库批次</th>
+                            <th>物料编码</th>
+                            <th>品类</th>
+                            <th>物料名称</th>
+                            <th>品牌</th>
+                            <th>数量</th>
+                            <th>单位</th>
+                            <th>经办人</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>1批</td>
+                            <td>2017/12/23</td>
+                            <td>20171237002 </td>
+                            <td>1批</td>
+                            <td>20171237002 </td>
+                            <td>品类1</td>
+                            <td>金坷垃</td>
+                            <td>品牌1</td>
+                            <td>67</td>
+                            <td>kg</td>
+                            <td>朱培林</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="fy">这里是分页</div>
+                </div>
+                <div class="lis">
+                    <!--选中状态为lis-in-->
+                    <a href="main8-2.html">
+                        <div class="lis-1 dl ml150">
+                            <div class="lis1-1"><img src="../public/img/lis5.png" alt=""/></div>
+                            <div class="lis1-2">入库</div>
+                        </div>
+                    </a>
+                    <a href="main8-3.html">
+                        <div class="lis-1 dl ml20  lis-in" style="margin-left: 50px">
+                            <div class="lis1-1"><img src="../public/img/lis6.png" alt=""/></div>
+                            <div class="lis1-2">出库</div>
+                        </div>
+                    </a>
+                    <a href="main8-4.html">
+                        <div class="lis-1 dl ml20" style="margin-left: 50px">
+                            <div class="lis1-1"><img src="../public/img/lis7.png" alt=""/></div>
+                            <div class="lis1-2">库存</div>
+                        </div>
+                    </a>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</form>
+<script src="../public/layui/layui.js"></script>
+<script>
+    layui.use(['form',], function() {
+        var form = layui.form;
+
+    })
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        //时间选择器
+        $(".layui-time").each(function () {
+            laydate.render({
+                elem: this, //指定元素
+            });
+        });
+    });
+    $(".add").click(function () {
+        layer.open({
+            type: 2,
+            shadeClose: true,
+            title: '新增入库',
+            area: ['60%', '60%'],
+            content: 'main8-3pop.html'
+
+        });
+
+
+    });
+
+    $(".sc").click(function () {
+        layer.confirm('确认删除？', {
+            btn: ['是','否'] //按钮
+        });
+
+
+    });
+
+
+</script>
+
+
+</body>
+</html>

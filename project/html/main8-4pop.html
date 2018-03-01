@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/css/basic.css"/>
+    <link rel="stylesheet" href="../public/css/main.css"/>
+    <link rel="stylesheet" href="../public/layui/css/layui.css"/>
+    <script src="../public/js/jquery-1.11.1.min.js"></script>
+    <title>库存详情</title>
+    <style>
+        body{padding: 20px;min-width: 450px}
+        .kc{height: 40px;}
+        .kc1{height: 40px;line-height: 40px;width: 33%;display: inline-block;float: left;}
+        th,td{text-align: center;line-height: 30px}
+        .tb-main{width: 100%;height: 150px;overflow-y: scroll}
+        .but{width: 120px;margin: 0 auto;margin-top: 50px}
+
+    </style>
+</head>
+<body>
+    <div class="kc">
+       <div class="kc1">
+           <span class="kc1-1">物料编码：</span>
+           <span class="kc1-1">12343122345</span>
+       </div>
+        <div class="kc1">
+            <span class="kc1-1">品类：</span>
+            <span class="kc1-1">化肥</span>
+        </div>
+        <div class="kc1">
+            <span class="kc1-1">单位：</span>
+            <span class="kc1-1">千克</span>
+        </div>
+    </div>
+    <div class="kc">
+        <div class="kc1">
+            <span class="kc1-1">物料名称：</span>
+            <span class="kc1-1">氮肥</span>
+        </div>
+        <div class="kc1">
+            <span class="kc1-1">品牌：</span>
+            <span class="kc1-1">苗壮壮</span>
+        </div>
+        <div class="kc1">
+            <span class="kc1-1">结存：</span>
+            <span class="kc1-1">120.00</span>
+        </div>
+    </div>
+    <div style="height: 40px"></div>
+
+    <!--入库信息-->
+    <div style="overflow-y: scroll">
+        <table style="width:100%;">
+            <thead >
+                <tr style="height: 30px;background-color: #efefef">
+                     <th width="15%">物料编码</th>
+                     <th width="8%">品类</th>
+                     <th width="8%">物料名称</th>
+                     <th width="8%">品牌</th>
+                     <th width="4%">数量</th>
+                     <th width="4%">单位</th>
+                     <th width="8%">入库批次</th>
+                     <th width="15%">入库编码</th>
+                     <th width="8%">入库日期</th>
+                     <th width="8%">仓库</th>
+                     <th width="8%">剩余</th>
+                     <th width="8%">经办人</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="tb-main">
+        <table style="width: 100%;">
+            <tbody>
+            <tr>
+                <td width="15%">201712838147346</td>
+                <td width="8%">化肥</td>
+                <td width="8%">金坷垃</td>
+                <td width="8%">苗强壮</td>
+                <td width="4%">12</td>
+                <td width="4%">kg</td>
+                <td width="8%">12</td>
+                <td width="15%">201712314313</td>
+                <td width="8%">2017-12-23</td>
+                <td width="8%">三号仓库</td>
+                <td width="8%">45</td>
+                <td width="8%">朱培林</td>
+            </tr>
+            <tr>
+                <td>201712838147346</td>
+                <td>化肥</td>
+                <td>金坷垃</td>
+                <td>苗强壮</td>
+                <td>12</td>
+                <td>kg</td>
+                <td>23</td>
+                <td>20171224342234</td>
+                <td>1017-12-23</td>
+                <td>三号仓库</td>
+                <td>45</td>
+                <td>朱培林</td>
+            </tr>
+            <tr>
+                <td>201712838147346</td>
+                <td>化肥</td>
+                <td>金坷垃</td>
+                <td>苗强壮</td>
+                <td>12</td>
+                <td>kg</td>
+                <td>23</td>
+                <td>20171224342234</td>
+                <td>1017-12-23</td>
+                <td>三号仓库</td>
+                <td>45</td>
+                <td>朱培林</td>
+            </tr>
+            <tr>
+                <td>201712838147346</td>
+                <td>化肥</td>
+                <td>金坷垃</td>
+                <td>苗强壮</td>
+                <td>12</td>
+                <td>kg</td>
+                <td>23</td>
+                <td>20171224342234</td>
+                <td>1017-12-23</td>
+                <td>三号仓库</td>
+                <td>45</td>
+                <td>朱培林</td>
+            </tr>
+            <tr>
+                <td>201712838147346</td>
+                <td>化肥</td>
+                <td>金坷垃</td>
+                <td>苗强壮</td>
+                <td>12</td>
+                <td>kg</td>
+                <td>23</td>
+                <td>20171224342234</td>
+                <td>1017-12-23</td>
+                <td>三号仓库</td>
+                <td>45</td>
+                <td>朱培林</td>
+            </tr>
+            <tr>
+                <td>201712838147346</td>
+                <td>化肥</td>
+                <td>金坷垃</td>
+                <td>苗强壮</td>
+                <td>12</td>
+                <td>kg</td>
+                <td>23</td>
+                <td>20171224342234</td>
+                <td>1017-12-23</td>
+                <td>三号仓库</td>
+                <td>45</td>
+                <td>朱培林</td>
+            </tr>
+            <tr>
+                <td>201712838147346</td>
+                <td>化肥</td>
+                <td>金坷垃</td>
+                <td>苗强壮</td>
+                <td>12</td>
+                <td>kg</td>
+                <td>23</td>
+                <td>20171224342234</td>
+                <td>1017-12-23</td>
+                <td>三号仓库</td>
+                <td>45</td>
+                <td>朱培林</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div style="height: 40px"></div>
+    <!--出库信息-->
+    <div style="overflow-y: scroll">
+        <table style="width:100%;">
+            <thead >
+            <tr style="height: 30px;background-color: #efefef">
+                <th width="15%">物料编码</th>
+                <th width="8%">品类</th>
+                <th width="8%">物料名称</th>
+                <th width="8%">品牌</th>
+                <th width="4%">数量</th>
+                <th width="4%">单位</th>
+                <th width="8%">出库批次</th>
+                <th width="15%">出库编码</th>
+                <th width="8%">出库日期</th>
+                <th width="8%">仓库</th>
+                <th width="8%">剩余</th>
+                <th width="8%">经办人</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="tb-main">
+        <table style="width: 100%;">
+            <tbody>
+            <tr>
+                <td width="15%">201712838147346</td>
+                <td width="8%">化肥</td>
+                <td width="8%">金坷垃</td>
+                <td width="8%">苗强壮</td>
+                <td width="4%">12</td>
+                <td width="4%">kg</td>
+                <td width="8%">12</td>
+                <td width="15%">20171224342234</td>
+                <td width="8%">2017-12-23</td>
+                <td width="8%">三号仓库</td>
+                <td width="8%">45</td>
+                <td width="8%">朱培林</td>
+            </tr>
+            <tr>
+                <td>201712838147346</td>
+                <td>化肥</td>
+                <td>金坷垃</td>
+                <td>苗强壮</td>
+                <td>12</td>
+                <td>kg</td>
+                <td>23</td>
+                <td>20171224342234</td>
+                <td>1017-12-23</td>
+                <td>三号仓库</td>
+                <td>45</td>
+                <td>朱培林</td>
+            </tr>
+            <tr>
+                <td>201712838147346</td>
+                <td>化肥</td>
+                <td>金坷垃</td>
+                <td>苗强壮</td>
+                <td>12</td>
+                <td>kg</td>
+                <td>23</td>
+                <td>20171224342234</td>
+                <td>1017-12-23</td>
+                <td>三号仓库</td>
+                <td>45</td>
+                <td>朱培林</td>
+            </tr>
+            <tr>
+                <td>201712838147346</td>
+                <td>化肥</td>
+                <td>金坷垃</td>
+                <td>苗强壮</td>
+                <td>12</td>
+                <td>kg</td>
+                <td>23</td>
+                <td>20171224342234</td>
+                <td>1017-12-23</td>
+                <td>三号仓库</td>
+                <td>45</td>
+                <td>朱培林</td>
+            </tr>
+            <tr>
+                <td>201712838147346</td>
+                <td>化肥</td>
+                <td>金坷垃</td>
+                <td>苗强壮</td>
+                <td>12</td>
+                <td>kg</td>
+                <td>23</td>
+                <td>20171224342234</td>
+                <td>1017-12-23</td>
+                <td>三号仓库</td>
+                <td>45</td>
+                <td>朱培林</td>
+            </tr>
+            <tr>
+                <td>201712838147346</td>
+                <td>化肥</td>
+                <td>金坷垃</td>
+                <td>苗强壮</td>
+                <td>12</td>
+                <td>kg</td>
+                <td>23</td>
+                <td>20171224342234</td>
+                <td>1017-12-23</td>
+                <td>三号仓库</td>
+                <td>45</td>
+                <td>朱培林</td>
+            </tr>
+            <tr>
+                <td>201712838147346</td>
+                <td>化肥</td>
+                <td>金坷垃</td>
+                <td>苗强壮</td>
+                <td>12</td>
+                <td>kg</td>
+                <td>23</td>
+                <td>20171224342234</td>
+                <td>1017-12-23</td>
+                <td>三号仓库</td>
+                <td>45</td>
+                <td>朱培林</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div  class="but">
+        <button class="layui-btn close">关闭</button>
+    </div>
+<script src="../public/layui/layui.js"></script>
+
+</body>
+<script>
+    $('.but').click(function(){
+        var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+        parent.layer.close(index);
+    });
+</script>
+</html>

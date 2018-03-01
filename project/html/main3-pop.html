@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/css/basic.css"/>
+    <link rel="stylesheet" href="../public/css/main.css"/>
+    <link rel="stylesheet" href="../public/layui/css/layui.css"/>
+    <script src="../public/js/jquery-1.11.1.min.js"></script>
+    <title>设备操作记录</title>
+    <style>
+        body{min-width: 1000px}
+
+    </style>
+</head>
+<body>
+<div class="m-body">
+
+    <div class="m-main">
+        <div class="main">
+            <div class="ss1">
+                <form class="layui-form" action="">
+                    <div class="layui-input-inline fl mb30" >
+                        <label class="layui-form-label"  style="padding-left: 0;text-align: left;width:80px;">生产区域</label>
+                        <div class="layui-input-block" style="width: 150px;margin-left: 100px">
+                            <select name="interest" lay-filter="aihao">
+                                <option value="">全部</option>
+                                <option value="0">区域2</option>
+                                <option value="1" selected="">区域3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-input-inline fl ml20  mb30" >
+                        <label class="layui-form-label"  style="padding-left: 0;text-align: left;width: 80px;">生产区块</label>
+                        <div class="layui-input-block" style="width: 150px;margin-left: 100px">
+                            <select name="interest" lay-filter="aihao">
+                                <option value="">全部</option>
+                                <option value="0">区块2</option>
+                                <option value="1" selected="">区块3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-input-inline fl ml20  mb30" >
+                        <label class="layui-form-label"  style="padding-left: 0;text-align: left;width:60px;">操作人</label>
+                        <div class="layui-input-block" style="width: 150px;margin-left:80px">
+                            <select name="interest" lay-filter="aihao">
+                                <option value="">全部</option>
+                                <option value="0">朱培林</option>
+                                <option value="1" selected="">黄伟毅</option>
+                                <option value="2">王泽辉</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-inline fl  mb30">
+                        <label class="layui-form-label" style="text-align: left;width:80px;">开始时间</label>
+                        <div class="layui-input-inline" style="margin-left:5px;width: 100px">
+                            <input type="text" class="layui-input" id="date1" >
+                        </div>
+                    </div>
+                    <div class="layui-inline fl  mb30">
+                        <label class="layui-form-label">结束时间</label>
+                        <div class="layui-input-inline" style="width: 100px">
+                            <input type="text" class="layui-input" id="date2" >
+                        </div>
+                    </div>
+                    <input type="submit" class="layui-btn ml20 " value="搜索"/>
+                    <div  class="layui-btn fl ml20  mb30">导出excel</div>
+                </form>
+            </div>
+            <div class="table">
+                <div class="layui-form">
+                    <table id="table" class="layui-table">
+                        <thead>
+                        <tr>
+                            <th>区域</th>
+                            <th>区块</th>
+                            <th>设备名称</th>
+                            <th>操作人</th>
+                            <th>设备开启时间</th>
+                            <th>设备关闭时间</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1#棚二区</td>
+                            <td>育苗</td>
+                            <td>喷雾</td>
+                            <td>朱培林</td>
+                            <td>2017年9月06日  21:07:56</td>
+                            <td>2017年9月06日  22:07:56</td>
+                        </tr>
+                        <tr>
+                            <td>1#棚二区</td>
+                            <td>育苗</td>
+                            <td>喷雾</td>
+                            <td>朱培林</td>
+                            <td>2017年9月06日  21:07:56</td>
+                            <td>2017年9月06日  22:07:56</td>
+                        </tr>
+                        <tr>
+                            <td>1#棚二区</td>
+                            <td>育苗</td>
+                            <td>喷雾</td>
+                            <td>朱培林</td>
+                            <td>2017年9月06日  21:07:56</td>
+                            <td>2017年9月06日  22:07:56</td>
+                        </tr>
+                        <tr>
+                            <td>1#棚二区</td>
+                            <td>育苗</td>
+                            <td>喷雾</td>
+                            <td>朱培林</td>
+                            <td>2017年9月06日  21:07:56</td>
+                            <td>2017年9月06日  22:07:56</td>
+                        </tr>
+                        <tr>
+                            <td>1#棚二区</td>
+                            <td>育苗</td>
+                            <td>喷雾</td>
+                            <td>朱培林</td>
+                            <td>2017年9月06日  21:07:56</td>
+                            <td>2017年9月06日  22:07:56</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="fy">这里是分页</div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="../public/layui/layui.js"></script>
+
+
+<script>
+    layui.use(['form','laydate'], function() {
+        var form = layui.form;
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#date1'
+        });
+        laydate.render({
+            elem: '#date2'
+        });
+    })
+
+</script>
+
+
+</body>
+</html>

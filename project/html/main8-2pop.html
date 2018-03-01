@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/css/basic.css"/>
+    <link rel="stylesheet" href="../public/css/main.css"/>
+    <link rel="stylesheet" href="../public/layui/css/layui.css"/>
+    <title>新增入库</title>
+    <style>
+        body{padding: 20px;min-width: 450px}
+        .popo{width: 50%;}
+        .but{width: 120px;margin: 0 auto}
+        .pd{text-align: left;padding-left: 0}
+
+    </style>
+</head>
+<body>
+
+<form action="" class="layui-form">
+    <div class="layui-form-item">
+        <label class="layui-form-label">物料编码：</label>
+        <div class="layui-input-block">
+            <select >
+                <option value="0" lay-placeholder="化肥-苗壮壮-金坷垃">21323445  </option>
+                <option value="1"lay-placeholder="化肥-苗壮壮-氮肥"  selected="">21221312341</option>
+                <option value="2" lay-placeholder="化肥-苗壮壮-尿素">333123123</option>
+            </select>
+        </div>
+    </div>
+    <div class="popo dl">
+        <div class="layui-form-item">
+            <label class="layui-form-label">数量：</label>
+            <div class="layui-input-block pd">
+                <input type="text"  placeholder="请输入入库数量" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">入库日期：</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input" id="date1" >
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">批次：</label>
+            <label class="layui-form-label pd">12</label>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">品类：</label>
+            <label class="layui-form-label pd">化肥</label>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">物料名称：</label>
+            <label class="layui-form-label pd">金坷垃</label>
+        </div>
+
+
+    </div>
+    <div class="popo dl">
+        <div class="layui-form-item">
+            <label class="layui-form-label">单位：</label>
+            <label class="layui-form-label pd">kg</label>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">品牌：</label>
+            <label class="layui-form-label pd">苗强壮</label>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">入库批次：</label>
+            <label class="layui-form-label pd">20171212336</label>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">经办人：</label>
+            <label class="layui-form-label pd">朱培林</label>
+        </div>
+    </div>
+
+    <div  class="but">
+        <button class="layui-btn">提交</button>
+    </div>
+</form>
+
+<script src="../public/layui/layui.js"></script>
+<script>
+    layui.use(['form','laydate'], function() {
+        var form = layui.form;
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#date1'
+        });
+    })
+
+</script>
+</body>
+</html>

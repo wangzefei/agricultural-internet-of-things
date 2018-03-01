@@ -1,0 +1,141 @@
+/*html{overflow-y:auto;}*/
+/*html,body{font-size:12px;font-family:"微软雅黑";color:#333;height: auto;}*/
+/**{margin:0px;padding:0px;font-style:normal;}*/
+/*img{border-style:none;}*/
+/*a{display:inline-block;text-decoration:none;color:#333;}*/
+.content .container{  min-height: 668px;}
+.d-list a{display:block;width:42px;height:42px;float:left;}
+.channel-list{position:absolute;top:150px;left:10px;padding:10px;border:1px solid #989898;border-radius:5px;padding-right: 0;}
+html .rollbar-handle{background-color:#f4f5f0;border:1px solid #bec0bb;border-radius:5px;}
+html .rollbar-path-vertical{background:#cdcbcc;right:5px;width:4px;}
+html .rollbar-path-vertical .rollbar-handle{width:8px;left:-3px;opacity:1;box-sizing: content-box;}
+.channel-list .channel-control ul li{width:92px;margin-bottom:12px;margin-right:10px;height:24px;background:url(../img/images/video/v2/channel-bg.png) no-repeat center center;}
+.pos-pot{position:absolute;top:285px;left:10px;width:230px;}
+/**/
+html .content-panl{margin-top:50px}
+*{margin:0;padding:0;font-style:normal}
+.contain{position:relative;margin:0 auto}
+.fp-panal .selects{position:relative;margin-top:260px;margin-left:15px}
+.vv-play{background:url(../img/images/video/play/play.png) no-repeat 15px center;background-color:#444}
+.vv-pause{background:url(../img/images/video/play/pause.png) no-repeat center center;background-color:#444}
+.vv-close{background:url(../img/images/video/play/stop.png) no-repeat center center;background-color:#444}
+.vv-next{background:url(../img/images/video/play/next.png) no-repeat center center;background-color:#444}
+.vv-play.active,.vv-play:hover{background-color:#000}
+.vv-stop.active,.vv-stop:hover{background-color:#000}
+.vv-close.active,.vv-close:hover{background-color:#000}
+.vv-pause.active,.vv-pause:hover{background-color:#000}
+.vv-next.active,.vv-next:hover{background-color:#000}
+.selects ul li{color:#000}
+ul{list-style:none}
+.selects{position:relative;display:inline-block;cursor:pointer}
+.name-input input{width:70px;height:23px;border:1px solid #dedede;text-indent:20px;line-height:23px}
+.selects ul{position:absolute;z-index:100;display:none;overflow-x:hidden;overflow-y:auto;width:100%;background:#fff;cursor:pointer}
+.selects ul li{overflow:hidden;width:100%;height:23px;text-align:left;text-indent:5px;text-overflow:ellipsis;white-space:nowrap;line-height:23px}
+.selects ul .no:hover{background:#ccc}
+.selects ul .active{background-color:#1c8ee6;color:#FFF}
+ul{list-style:none}
+body{padding-bottom:50px}
+.search{margin-top:20px;margin-left:60px}
+.contain{width:1346px}
+.content .fp-panal{position:relative;overflow:hidden;width:106px;height:549px;background-color:#303030}
+.fp-panal .fp{margin:0 auto;padding-top:17px;width:23px;height:23px;cursor:pointer}
+.fp-panal .one{background:url(../img/images/video/v1.png) no-repeat center center}
+.fp-panal .four{background:url(../img/images/video/v4.png) no-repeat center center}
+.fp-panal .nine{background:url(../img/images/video/v9.png) no-repeat center center}
+.fp-panal .twl{background:url(../img/images/video/v16.png) no-repeat center center}
+.fp-panal .one.active,.fp-panal .one:hover{background:url(../img/images/video/v1-hover.png) no-repeat center center}
+.fp-panal .four.active,.fp-panal .four:hover{background:url(../img/images/video/v4-hover.png) no-repeat center center}
+.fp-panal .nine.active,.fp-panal .nine:hover{background:url(../img/images/video/v9-hover.png) no-repeat center center}
+.fp-panal .twl.active,.fp-panal .twl:hover{background:url(../img/images/video/v16-hover.png) no-repeat center center}
+.selects input{width:75px;height:17px;background:url(../img/images/wlyun/fengsj/b-xl.png) no-repeat 60px center;background-color:#fff;text-indent:5px;line-height:17px;cursor:pointer}
+.fp-panal .selects ul li{text-align:left;text-indent:5px}
+.bottom{position:absolute;bottom:40px;left:15px;margin:0 auto;margin-top:44px;width:75px}
+.bottom .fullscran{float:left;width:26px;height:20px;background:url(../img/images/video/v2/fullscran.png) no-repeat center center;cursor:pointer}
+.bottom .caram{float:right;width:26px;height:20px;background:url(../img/images/video/v2/camera2.png) no-repeat center center;cursor:pointer}
+.bottom .fullscran:hover{background:url(../img/images/video/v2/fullscran-hover.png) no-repeat center center}
+.bottom .caram:hover{background:url(../img/images/video/v2/camera2-hover.png) no-repeat center center}
+.content .video{position:absolute;top:0;left:106px;z-index:1;width:787px;height:541px;border:4px solid #000;background:#343434}
+.right-panl{position:absolute;right:22px;width:347px;height:549px;background:#303030}
+.content .v-button{position:absolute;width:22px;height:115px;text-align:center;cursor:pointer}
+.content .play{top:19px;right:0;background:url(../img/images/video/btn-loop.png) no-repeat center center}
+.content .loop{top:134px;right:0;background:url(../img/images/video/btn-loop.png) no-repeat center center}
+.right{position:absolute;top:0;right:347px;z-index:0}
+.content .v-button-active{background:url(../img/images/video/btn-active.png) no-repeat center center;color:#fff}
+.play i{display:block;width:22px;height:32px;background:url(../img/images/video/arrow-right-black.png) no-repeat center bottom}
+.v-button p{margin-top:3px}
+.loop i{display:block;width:22px;height:32px;background:url(../img/images/video/arrow-right-black.png) no-repeat center bottom}
+.v-button .fh{background:url(../img/images/video/arrow-left-white.png) no-repeat center bottom}
+.right-panl .controlss{position:absolute;z-index:1;width:347px;height:549px;background:#303030}
+.play-control{overflow:hidden;margin-left:43px;width:260px}
+.play-control a{float:left;display:inline-block;margin:10px;margin-left:25px;width:48px;height:48px;border-radius:48px;background-color:#444}
+.vv-play{background:url(../img/images/video/play/play.png) no-repeat 16px center}
+.d-control{position:absolute;top:10px;left:10px;width:126px;height:126px;background:url(../img/images/video/v2/bg.png) no-repeat center center}
+.d-list{position:relative;width:100%;height:100%}
+.d-list .d1{background:url(../img/images/video/v2/d1.png) no-repeat center center}
+.d-control .d-list .d1:hover{background:url(../img/images/video/v2/d1-hover.png) no-repeat center center}
+.d-list .d2{background:url(../img/images/video/v2/d2.png) no-repeat center center}
+.d-control .d-list .d2:hover{background:url(../img/images/video/v2/d2-hover.png) no-repeat center center}
+.d-list .d3{background:url(../img/images/video/v2/d3.png) no-repeat center center}
+.d-control .d-list .d3:hover{background:url(../img/images/video/v2/d3-hover.png) no-repeat center center}
+.d-list .d4{background:url(../img/images/video/v2/d4.png) no-repeat center center}
+.d-control .d-list .d4:hover{background:url(../img/images/video/v2/d4-hover.png) no-repeat center center}
+.d-list .d5{background:url(../img/images/video/v2/d5.png) no-repeat center center}
+.d-control .d-list .d5:hover{background:url(../img/images/video/v2/d5-hover.png) no-repeat center center}
+.d-list .d6{background:url(../img/images/video/v2/d6.png) no-repeat center center}
+.d-control .d-list .d6:hover{background:url(../img/images/video/v2/d6-hover.png) no-repeat center center}
+.d-list .d7{background:url(../img/images/video/v2/d7.png) no-repeat center center}
+.d-control .d-list .d7:hover{background:url(../img/images/video/v2/d7-hover.png) no-repeat center center}
+.d-list .d8{background:url(../img/images/video/v2/d8.png) no-repeat center center}
+.d-control .d-list .d8:hover{background:url(../img/images/video/v2/d8-hover.png) no-repeat center center}
+.d-list .d9{background:url(../img/images/video/v2/d9.png) no-repeat center center}
+.d-control .d-list .d9:hover{background:url(../img/images/video/v2/d9-hover.png) no-repeat center center}
+.d-func{position:absolute;top:10px;right:20px;width:176px}
+.d-sound,.d-zoom,.sound-loud,.sound-low{margin-bottom:12px;width:100%;height:34px;background:0 0}
+.d-func .d-photo{margin-bottom:12px;width:100%;height:34px;background:url(../img/images/video/v2/camera-control2.png) no-repeat center center}
+.d-func .photo-now{width:174px;height:34px;background:url(../img/images/video/v2/vb_err.png) no-repeat 40px center;color:#9c9c9c;text-indent:70px;line-height:34px;}
+.channel-list{overflow:hidden;width:308px;height:90px}
+.channel-list .channel-control ul li{float:left;margin-right:8px;margin-bottom:8px;width:140px;height:24px;border-radius:5px;background-color:#181818;line-height:24px;cursor:pointer;behavior:url(/css/PIE.htc)}
+.channel-list .channel-control ul li:hover{background:#197ede}
+.channel-list .channel-control{width:310px;height:90px}
+.channel-control ul li a{display:block;width:100%;height:100%;background:url(../img/images/video/v2/qj.png) no-repeat 8px center;color:#fff;text-indent:35px}
+.channel-control ul li a i{float:right;display:block;width:26px;height:24px;background:url(../img/images/video/control/state-wait.png) no-repeat center center}
+.channel-control .play{background:url(../img/images/video/control/state-play.png) no-repeat center center}
+.channel-control .fail{background:url(../img/images/video/control/state-fail.png) no-repeat center center}
+.channel-list .channel-control ul{width:310px}
+.status_text{position:absolute;top:13px;right:300px}
+html .rollbar-path-vertical .rollbar-handle{left:-3px}
+html .rollbar-path-vertical{right:10px}
+.pos-pot{width:320px}
+.right-panl .loop-control{position:absolute;z-index:0;width:347px;height:549px;background:#303030}
+.top-button li{text-align:center;font-size:14px}
+.top-button li label{float:left;margin-right:10px;width:115px;height:25px;color:#fff;text-align:right;line-height:25px}
+.top-button{margin-top:30px}
+.top-button li input{float:left;padding-right:20px;width:130px;height:23px;background:url(../img/images/margzz/cancel.png) no-repeat 130px center;background-color:#fff;text-indent:5px}
+.top-button li{margin-bottom:10px;height:25px}
+.top-button li .search{margin:0 auto;margin-top:20px;width:74px;height:26px;background:#1c81e7;background:url(../img/images/video/btn.png) no-repeat 10px center;color:#fff;line-height:26px;cursor:pointer}
+.video-replay{margin:0 auto;padding:10px;width:260px;height:280px;background-color:#fff}
+.video-replay ul{padding-top:10px}
+.video-replay li span{float:left;display:block;line-height:20px}
+.video-replay li{margin-right:10px;margin-bottom:2px;color:#06c}
+.video-replay li .xh{width:34px;height:20px;text-align:center}
+.video-replay li .name{overflow:hidden;margin-right:20px;padding-left:4px;width:150px;height:20px;text-overflow:ellipsis;white-space:nowrap;cursor:pointer}
+.video-replay li:hover{background-color:#e6e6e6}
+.video-replay li a{color:#167400;cursor:pointer}
+.d-zoom .d-sound-right{float:left;width:80px;height:34px;border-radius:5px;background:url(../img/images/video/v2/xt.png) no-repeat center center;background-color:#F1F1F1;cursor:pointer;behavior:url(/css/PIE.htc)}
+.d-zoom .d-sound-right p{line-height:34px}
+.d-zoom .d-zoom-right{float:right;width:80px;height:34px;border-radius:5px;background:url(../img/images/video/v2/xt.png) no-repeat center center;background-color:#F1F1F1;cursor:pointer;behavior:url(/css/PIE.htc)}
+.d-zoom .d-zoom-right p{line-height:34px}
+.d-sound .d-sound-left p{line-height:34px}
+.d-zoom .d-zoom-right .big{float:left;width:40px;height:100%;background:url(../img/images/video/v2/vb_sound.png) no-repeat center center}
+.d-zoom .d-zoom-right .big:hover{background:url(../img/images/video/v2/vb_sound_h.png) no-repeat center center}
+.d-zoom .d-zoom-right .sm{float:right;width:40px;height:100%;background:url(../img/images/video/v2/vs_sound.png) no-repeat center center}
+.d-zoom .d-zoom-right .sm:hover{background:url(../img/images/video/v2/vs_sound_h.png) no-repeat center center}
+.rollbar-handle{cursor:default}
+.d-zoom .d-sound-right .big{float:left;width:40px;height:100%;background:url(../img/images/video/v2/vb_play.png) no-repeat center center}
+.d-zoom .d-sound-right .big:hover{background:url(../img/images/video/v2/vb_play_h.png) no-repeat center center}
+.d-zoom .d-sound-right .sm{float:right;width:40px;height:100%;background:url(../img/images/video/v2/vs_play.png) no-repeat center center}
+.video-replay li .plays{margin-top:1px;margin-right:25px;width:30px;height:16px;border:1px solid #CCC;border-radius:5px;background:url(../img/images/video/v2/play.png) no-repeat center center;cursor:pointer;behavior:url(/css/PIE.htc)}
+.video-replay .activ{background-color:#b3b3b3}
+.video-replay .activ .plays{background:url(../img/images/video/v2/pause.png) no-repeat center center;background-color:#1a1a1a}
+
+.cLogin{float:right;display:none;margin-right:40px;width:16px;height:25px;background:url(../img/images/video/control/loading.gif) no-repeat center center;}

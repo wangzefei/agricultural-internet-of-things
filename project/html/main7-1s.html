@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/css/basic.css"/>
+    <link rel="stylesheet" href="../public/css/main.css"/>
+    <link rel="stylesheet" href="../public/layui/css/layui.css"/>
+    <script src="../public/js/jquery-1.11.1.min.js"></script>
+    <script src="../public/js/lunbo.js"></script>
+    <title>档案详情</title>
+    <style>
+        body{background: url("../public/img/bg-sky.jpg");background-repeat: no-repeat;background-size: 100%}
+        .repo img{width:350px;height: 650px;margin: 30px }
+    </style>
+</head>
+
+<div class="da">
+    <div class="da1">大棚监控芝麻（白芝麻）产品追溯档案</div>
+    <div class="da2">
+        <div class="da2-1 dl">
+            <div id="tFocus" class="mb10">
+                <div class="prev" id="prev"></div>
+                <div class="next" id="next"></div>
+                <ul id="tFocus-pic" class="zoom">
+                    <li><a><img src="../public/img/banner1.jpg" width="338" height="243" /></a></li>
+                    <li><a><img src="../public/img/banner2.jpg" width="338" height="243"  /></a></li>
+                    <li><a><img src="../public/img/banner3.jpg" width="338" height="243" /></a></li>
+                    <li><a ><img src="../public/img/pic1.png" width="338" height="243"  /></a></li>
+                    <li><a ><img src="../public/img/bg.jpg" width="338" height="243"  /></a></li>
+                </ul>
+                <div id="tFocusBtn" class="zoom">
+                    <a href="javascript:void(0);" id="tFocus-leftbtn">上一张</a>
+                    <div id="tFocus-btn">
+                        <ul>
+                            <li class="active"><img src="../public/img/banner1.jpg" width="80" height="57" /></li>
+                            <li><img src="../public/img/banner2.jpg" width="80" height="57"/></li>
+                            <li><img src="../public/img/banner3.jpg" width="80" height="57"/></li>
+                            <li><img src="../public/img/pic1.png" width="80" height="57" /></li>
+                            <li><img src="../public/img/bg.jpg" width="80" height="57" /></li>
+                        </ul>
+                    </div>
+                    <a href="javascript:void(0);" id="tFocus-rightbtn">下一张</a> </div>
+            </div>
+
+
+        </div>
+        <div class="da2-2 dl">
+            <div class="da2-2-1">白芝麻</div>
+            <div class="da2-2-2">
+                <div class="da2-2-2s dl">
+                    <div><img src="../public/img/ico1.png" alt=""/></div>
+                    <div>品种</div>
+                    <div>芝麻（白芝麻）</div>
+                </div>
+                <div class="da2-2-2s dl">
+                    <div><img src="../public/img/ico2.png" alt=""/></div>
+                    <div>产地</div>
+                    <div>湖南</div>
+                </div>
+                <div class="da2-2-2s dl">
+                    <div><img src="../public/img/ico3.png" alt=""/></div>
+                    <div>预计上市时间</div>
+                    <div>2017-08-08</div>
+                </div>
+            </div>
+            <div class="da2-2-3">
+                <span class="fl da2-2-2a">预计采摘日期</span>
+                <span class="fl">2017-08-08</span>
+                <span class="fl da2-2-2a">预计可售总量</span>
+                <span class="fl">5t</span>
+            </div>
+            <div class="da2-2-4">
+                <button class="da2-2-4a">
+                    立即购买
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <!--品种场地-->
+    <div class="da4">
+        <div class="layui-tab layui-tab-card">
+            <ul class="layui-tab-title">
+                <li class="layui-this">基本信息</li>
+                <li>基地信息</li>
+                <li>资质信息</li>
+                <li>质检报告</li>
+            </ul>
+            <div class="layui-tab-content" >
+                <!--基本信息-->
+                <div class="layui-tab-item layui-show" >
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">生产区域：</label>
+                        <div class="layui-input-block">
+                            <span class="da4-cd2">福州呵呵</span>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">生产区块：</label>
+                        <div class="layui-input-block">
+                            <span class="da4-cd2">有机大棚</span>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">生产批次：</label>
+                        <div class="layui-input-block">
+                            <span class="da4-cd2">12批</span>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">在售状态：</label>
+                        <div class="layui-input-block">
+                            <span class="da4-cd2">在售</span>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">采收时间：</label>
+                        <div class="layui-input-block">
+                            <span class="da4-cd2">2017-12-23</span>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">销售地址：</label>
+                        <div class="layui-input-block">
+                            <span class="da4-cd2">福建省福州市闽侯县上街镇</span>
+                        </div>
+                    </div>
+                </div>
+                <!--公司信息-->
+                <div class="layui-tab-item">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">公司名称：</label>
+                        <div class="layui-input-block">
+                            <span class="da4-cd2">福州奇子网络科技有限公司</span>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">公司性质：</label>
+                        <div class="layui-input-block">
+                            <span class="da4-cd2">民营</span>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">公司规模：</label>
+                        <div class="layui-input-block">
+                            <span class="da4-cd2">	100-499人</span>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">公司网站：</label>
+                        <div class="layui-input-block">
+                            <span class="da4-cd2">	http://www.huatikong.com</span>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">公司行业：</label>
+                        <div class="layui-input-block">
+                            <span class="da4-cd2">	互联网/电子商务,IT服务(系统/数据/维护),教育/培训/院校,专业服务/咨询(财会/法律/人力资源等)</span>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">公司地址：</label>
+                        <div class="layui-input-block">
+                            <span class="da4-cd2">福州高新区海西高新技术产业园创业大厦7楼</span>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">公司介绍：</label>
+                        <div class="layui-input-block">
+                            <span class="da4-cd2">
+                                福州奇子网络科技有限公司，将于2016年12月于福建省海峡股权交易中心双创板挂牌交易，【奇子科技】股票代码：800002。
+奇子科技专注于K12领域的教育。目前产品主要包含“话题控”——一个专业的写作修改平台。软件覆盖WEB端（www.huatikong.com 以及 www.51htk.com），安卓端与IOS端。同时我们也与共青团中央未来网共建福建小记者站，覆盖全省9个地市，总共覆盖3万余名相关人群。
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!--资质信息-->
+                <div class="layui-tab-item repo">
+                    <img src="../public/img/report.png" alt=""/>
+                    <img src="../public/img/report.png" alt=""/>
+                    <img src="../public/img/report.png" alt=""/>
+                    <img src="../public/img/report.png" alt=""/>
+                </div>
+                <!--质检报告-->
+                <div class="layui-tab-item repo">
+                    <img src="../public/img/report.png" alt=""/>
+                    <img src="../public/img/report.png" alt=""/>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--成长档案-->
+
+</div>
+
+<script src="../public/layui/layui.js"></script>
+<script>
+//    初始化焦点轮播
+    addLoadEvent(Focus());
+
+//layui初始化
+    layui.use(['form'], function() {
+        var form = layui.form;
+    })
+
+    layui.use('element', function(){
+        var $ = layui.jquery,
+         element = layui.element;
+
+    });
+
+
+</script>
+
+
+</body>
+</html>

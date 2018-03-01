@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/css/basic.css"/>
+    <link rel="stylesheet" href="../public/css/main.css"/>
+    <link rel="stylesheet" href="../public/layui/css/layui.css"/>
+    <script src="../public/js/jquery-1.11.1.min.js"></script>
+    <title>短信提醒</title>
+    <style>
+        body{min-width: 500px}
+    </style>
+</head>
+<body>
+
+<div class="m-main">
+
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">短信联系人</li>
+            <li>短信内容</li>
+        </ul>
+        <div class="layui-tab-content" >
+            <div class="layui-tab-item layui-show">
+                <div class="main">
+                <div class="ss1">
+                    <form class="layui-form" action="">
+                        <div class="layui-input-inline">
+                            <input type="text" name="username" lay-verify="required" placeholder="请输入姓名" autocomplete="off" class="layui-input">
+                        </div>
+                        <input type="submit" class="layui-btn ml20 " value="搜索"/>
+                        <div  class="layui-btn ml20 set add">新增联系人</div>
+                    </form>
+                </div>
+                <form action="" class="layui-form">
+                    <div class="table">
+                        <div class="layui-form">
+                            <table id="table" class="layui-table">
+                                <thead>
+                                <tr>
+                                    <th width="40px">序号</th>
+                                    <th>姓名</th>
+                                    <th>手机号</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>朱培林</td>
+                                    <td>13478458956</td>
+                                    <td>
+                                        <span class="bj dj">编辑</span>
+                                        <span class="sc dj">删除</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>朱培林</td>
+                                    <td>13478458956</td>
+                                    <td>
+                                        <span class="bj dj">编辑</span>
+                                        <span class="sc dj">删除</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>朱培林</td>
+                                    <td>13478458956</td>
+                                    <td>
+                                        <span class="bj dj">编辑</span>
+                                        <span class="sc dj">删除</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>朱培林</td>
+                                    <td>13478458956</td>
+                                    <td>
+                                        <span class="bj dj">编辑</span>
+                                        <span class="sc dj">删除</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>朱培林</td>
+                                    <td>13478458956</td>
+                                    <td>
+                                        <span class="bj dj">编辑</span>
+                                        <span class="sc dj">删除</span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="fy">这里是分页</div>
+                    </div>
+                </form>
+
+            </div>
+            </div>
+
+            <div class="layui-tab-item">
+                <div class="layui-input-block mb30">
+                    <textarea style="resize: none" placeholder="区域A大棚32号内温度过高" class="layui-textarea"></textarea>
+                </div>
+                <div class="tj "><input type="submit" class="layui-btn ml20 " value="提交"/></div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</div>
+
+
+<script src="../public/layui/layui.js"></script>
+
+
+<script>
+    layui.use(['form'], function() {
+        var form = layui.form;
+    })
+
+    //    tab切换
+    layui.use('element', function(){
+        var $ = layui.jquery
+                ,element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+
+
+    });
+
+//删除提醒
+    $(".sc").click(function () {
+        layer.confirm('确认删除？', {
+            btn: ['是','否'] //按钮
+        });
+
+
+    });
+
+//编辑联系人
+    $(".bj").click(function () {
+        layer.open({
+            type:1,
+            shadeClose: true,
+            title: '编辑联系人',
+            area: ['500px', '270px'],
+            content: '<form class="layui-form" style="padding: 20px"><div class="layui-form-item"><label class="layui-form-label">姓名：</label><div class="layui-input-block"><input type="text" class="layui-input"></div></div><div class="layui-form-item"><label class="layui-form-label">手机号：</label><div class="layui-input-block"><input type="text" class="layui-input"></div></div> <div class="tj"><input type="submit" class="layui-btn ml20 " value="提交"/></div></form>'
+
+        });
+
+
+    });
+
+//新增联系人
+    $(".add").click(function () {
+        layer.open({
+            type:1,
+            shadeClose: true,
+            title: '编辑联系人',
+            area: ['500px', '270px'],
+            content: '<form class="layui-form"  style="padding: 20px"><div class="layui-form-item"><label class="layui-form-label">姓名：</label><div class="layui-input-block"><input type="text" class="layui-input"></div></div><div class="layui-form-item"><label class="layui-form-label">手机号：</label><div class="layui-input-block"><input type="text" class="layui-input"></div></div> <div class="tj"><input type="submit" class="layui-btn ml20 " value="提交"/></div></form>'
+
+        });
+
+
+    });
+
+
+
+
+</script>
+
+
+</body>
+</html>
